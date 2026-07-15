@@ -100,26 +100,26 @@
     {
       "name": "resume-ats.html",
       "path": "artifacts/resume-ats.html",
-      "sha256": "6e919de853132c8bf605b575d92bdc5a7cbddcc847719a014f9d279cf7a6a6d9",
-      "bytes": 13058
+      "sha256": "f29f0edfef47e5d0fe24c2835912e154aec9cdcdbaa01848f6d255ddf46174dd",
+      "bytes": 12961
     },
     {
       "name": "resume-ats.pdf",
       "path": "artifacts/resume-ats.pdf",
-      "sha256": "9abf6ff06a92fbffce5db5e77cf98d340ccd6ff1ccaa1ea3330aee5affda855b",
-      "bytes": 463617
+      "sha256": "6b9057674bde3d7d50af35e9ff88cb8db4a1b131797488c9bccc9fccbef8dd48",
+      "bytes": 464191
     },
     {
       "name": "resume.html",
       "path": "artifacts/resume.html",
-      "sha256": "2ad7b852140e363f085fe1c056a1eb31b2dc9f9c2f57b23382cca4fa48b1c99d",
-      "bytes": 89139
+      "sha256": "b85af215c502134c035b0c2d4313d449e800b82a47c50024d5056bd1c6c8c64b",
+      "bytes": 89042
     },
     {
       "name": "resume.pdf",
       "path": "artifacts/resume.pdf",
-      "sha256": "d27481f4c54c52bec1a0cddd62e0feb62cb8d750e2c8c5f753a8a4a5f1247138",
-      "bytes": 625888
+      "sha256": "14dd22eb0515db08f8a106c366ea51cd718c41c5394ae71237676a3e76065361",
+      "bytes": 626862
     }
   ]
 }
