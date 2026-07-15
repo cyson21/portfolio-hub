@@ -310,9 +310,9 @@ tr:nth-child(even) td { background: #f8fafc; }
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   min-height: 0;
-  padding: 10px 11px 9px;
+  padding: 13px 14px;
   overflow: hidden;
   border: 1px solid var(--line);
   border-top: 4px solid var(--project-accent);
@@ -351,13 +351,13 @@ tr:nth-child(even) td { background: #f8fafc; }
 .summary-project-head h3 {
   margin: 0;
   color: var(--navy);
-  font-size: 14.2px;
+  font-size: 16px;
   line-height: 1.12;
 }
 .summary-project-domain {
   margin-top: 3px;
   color: var(--project-accent);
-  font-size: 8.8px;
+  font-size: 9.6px;
   font-weight: 850;
   line-height: 1.25;
   word-break: keep-all;
@@ -385,28 +385,28 @@ tr:nth-child(even) td { background: #f8fafc; }
 }
 .summary-project-facts {
   display: grid;
-  gap: 3px;
-  margin: 0;
+  gap: 8px;
+  margin: 12px 0 0;
 }
 .summary-project-facts div {
   display: grid;
-  grid-template-columns: 31px 1fr;
-  gap: 5px;
+  grid-template-columns: 38px 1fr;
+  gap: 8px;
   align-items: start;
 }
 .summary-project-facts dt {
   margin: 0;
   padding-top: 1px;
   color: var(--project-accent);
-  font-size: 8.1px;
+  font-size: 9.5px;
   font-weight: 900;
 }
 .summary-project-facts dd {
   margin: 0;
   color: #4b5d70;
-  font-size: 8.8px;
+  font-size: 10.4px;
   font-weight: 650;
-  line-height: 1.28;
+  line-height: 1.38;
   word-break: keep-all;
   overflow-wrap: break-word;
 }
@@ -476,9 +476,9 @@ tr:nth-child(even) td { background: #f8fafc; }
 .capability-card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   min-height: 0;
-  padding: 11px;
+  padding: 13px 14px;
   border: 1px solid var(--line);
   border-radius: 7px;
   background: #ffffff;
@@ -503,13 +503,13 @@ tr:nth-child(even) td { background: #f8fafc; }
 .capability-card h3 {
   margin: 0;
   color: var(--navy);
-  font-size: 14.4px;
+  font-size: 16px;
   line-height: 1.15;
 }
 .capability-description {
   margin: 7px 0 6px;
   color: #3e5064;
-  font-size: 9.8px;
+  font-size: 10.8px;
   font-weight: 700;
   line-height: 1.35;
   word-break: keep-all;
@@ -531,7 +531,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   border-radius: 5px;
   background: #f4f8ff;
   color: #31506f;
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 850;
   line-height: 1.15;
   text-align: center;
@@ -613,6 +613,32 @@ tr:nth-child(even) td { background: #f8fafc; }
   padding: 2px 6px;
   font-size: 7.6px;
 }
+.capability-result,
+.capability-projects {
+  margin-top: 7px;
+  color: #4b5d70;
+  font-size: 9.8px;
+  line-height: 1.36;
+  font-weight: 650;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.capability-result {
+  padding: 7px 8px;
+  border-left: 3px solid var(--green);
+  background: #f7faf9;
+}
+.capability-result b,
+.capability-projects b {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--navy);
+  font-size: 8.5px;
+  font-weight: 900;
+}
+.capability-projects {
+  color: #617287;
+}
 .cover-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -668,6 +694,15 @@ tr:nth-child(even) td { background: #f8fafc; }
   word-break: keep-all;
   overflow-wrap: break-word;
 }
+.cover-result {
+  display: block;
+  margin-top: 5px;
+  color: #9fd1ff;
+  font-size: 9.5px;
+  line-height: 1.32;
+  font-weight: 800;
+  word-break: keep-all;
+}
 .cover-stack-mini {
   display: flex;
   flex-wrap: wrap;
@@ -692,7 +727,7 @@ tr:nth-child(even) td { background: #f8fafc; }
 }
 .case-page {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 250px minmax(0, 1fr);
   gap: 0;
   padding: 0;
   background: #ffffff;
@@ -702,7 +737,7 @@ tr:nth-child(even) td { background: #f8fafc; }
 .case-rail {
   position: relative;
   min-height: 900px;
-  padding: 48px 34px 42px 38px;
+  padding: 46px 26px 42px 30px;
   color: #ffffff;
   background: linear-gradient(180deg, #102033 0%, #18314d 100%);
 }
@@ -732,13 +767,16 @@ tr:nth-child(even) td { background: #f8fafc; }
   color: #ffffff;
   font-size: 20px;
   line-height: 1.08;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  word-break: keep-all;
 }
 .case-rail h1.compact {
   font-size: 14px;
-  line-height: 1.12;
-  overflow-wrap: normal;
-  word-break: normal;
+  line-height: 1.14;
+}
+.case-rail h1.ultra-compact {
+  font-size: 12.5px;
+  line-height: 1.16;
 }
 .rail-domain {
   margin-top: 5mm;
@@ -809,6 +847,7 @@ tr:nth-child(even) td { background: #f8fafc; }
 .case-main {
   display: flex;
   flex-direction: column;
+  min-width: 0;
   min-height: 900px;
   padding: 46px 46px 36px;
   gap: 26px;
@@ -1265,6 +1304,7 @@ tr:nth-child(even) td { background: #f8fafc; }
 }
 .case-architecture {
   position: relative;
+  min-width: 0;
   padding: 12px 14px 14px;
   overflow: hidden;
   border: 1px solid #d4deea;
@@ -1306,8 +1346,10 @@ tr:nth-child(even) td { background: #f8fafc; }
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 8px;
+  width: 100%;
+  min-width: 0;
 }
 .case-arch-node {
   position: relative;
@@ -1315,6 +1357,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-width: 0;
   min-height: 68px;
   padding: 8px 5px 6px;
   border: 1px solid #cdd9e6;
@@ -1353,6 +1396,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   color: var(--navy);
   font-size: 8.7px;
   line-height: 1.12;
+  overflow-wrap: anywhere;
 }
 .case-arch-node em {
   margin-top: 3px;
@@ -1363,7 +1407,7 @@ tr:nth-child(even) td { background: #f8fafc; }
 }
 .case-proof-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
 }
 .case-proof-card {
@@ -1395,6 +1439,7 @@ tr:nth-child(even) td { background: #f8fafc; }
 .case-proof-card p {
   display: block;
 }
+.case-proof-card > div { min-width: 0; }
 .case-proof-card b {
   color: #6b7b8f;
   font-size: 7.3px;
@@ -1412,15 +1457,20 @@ tr:nth-child(even) td { background: #f8fafc; }
   font-size: 7.4px;
   line-height: 1.18;
   font-weight: 700;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .case-process-line {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  width: 100%;
+  min-width: 0;
   overflow: hidden;
   border: 1px solid #d8e2ee;
   border-radius: 5px;
 }
 .case-process-line .flow-item {
+  min-width: 0;
   min-height: 31px;
   padding: 8px 4px;
   font-size: 7.7px;
@@ -1515,7 +1565,7 @@ tr:nth-child(even) td { background: #f8fafc; }
 }
 .case-evidence-grid {
   display: grid;
-  grid-template-columns: 1.34fr 0.66fr;
+  grid-template-columns: minmax(0, 1.42fr) minmax(0, 0.58fr);
   gap: 16px;
 }
 .case-evidence-section {
@@ -1533,7 +1583,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   grid-template-columns: 1fr;
   gap: 4px;
   min-height: 0;
-  padding: 6px 7px;
+  padding: 8px 9px;
   background: var(--navy);
 }
 .case-code-head {
@@ -1547,30 +1597,40 @@ tr:nth-child(even) td { background: #f8fafc; }
   overflow-wrap: anywhere;
 }
 .case-code-path {
-  display: block;
+  display: flex;
+  gap: 5px;
+  align-items: baseline;
   color: rgba(255,255,255,0.48);
-  font-size: 6.1px;
+  font-size: 7.2px;
+  line-height: 1.25;
   font-weight: 650;
   text-align: left;
   overflow-wrap: anywhere;
 }
+.case-code-path b,
+.case-code-description b {
+  flex: 0 0 auto;
+  color: #74d8b2;
+  font-size: 0.9em;
+  font-weight: 950;
+}
 .case-code-snippet {
   margin: 0;
-  padding: 4px 5px;
-  overflow: hidden;
+  padding: 6px 7px;
+  overflow: visible;
   background: rgba(255,255,255,0.06);
   color: #d8e7ff;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
-  font-size: 6.4px;
-  line-height: 1.28;
+  font-size: 7.8px;
+  line-height: 1.34;
   white-space: pre-wrap;
   word-break: break-word;
 }
 .case-code-description {
   margin: 0;
   color: rgba(255,255,255,0.86);
-  font-size: 6.9px;
-  line-height: 1.24;
+  font-size: 8px;
+  line-height: 1.32;
   font-weight: 650;
   word-break: keep-all;
   overflow-wrap: break-word;
@@ -1580,13 +1640,14 @@ tr:nth-child(even) td { background: #f8fafc; }
   align-items: baseline;
   gap: 5px;
   color: rgba(255,255,255,0.64);
-  font-size: 6.1px;
-  line-height: 1.2;
+  font-size: 6.8px;
+  line-height: 1.28;
   overflow-wrap: anywhere;
 }
 .case-code-test b {
   color: #74d8b2;
-  font-size: 5.8px;
+  flex: 0 0 auto;
+  font-size: 6.6px;
   font-weight: 950;
 }
 .case-evidence-section .list {
@@ -1596,8 +1657,8 @@ tr:nth-child(even) td { background: #f8fafc; }
 .case-evidence-section .list li {
   padding-left: 11px;
   color: #3f5164;
-  font-size: 8px;
-  line-height: 1.26;
+  font-size: 9px;
+  line-height: 1.34;
   font-weight: 650;
   word-break: keep-all;
   overflow-wrap: break-word;
@@ -1795,6 +1856,95 @@ tr:nth-child(even) td { background: #f8fafc; }
   line-height: 1.2;
   font-weight: 700;
 }
+.technical-index-table {
+  flex: 1 1 auto;
+  table-layout: fixed;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.technical-index-table thead th {
+  padding: 9px 10px;
+  background: var(--navy);
+  color: #ffffff;
+  font-size: 9.5px;
+}
+.technical-index-table thead th:first-child { width: 20%; }
+.technical-index-table thead th:nth-child(2) { width: 24%; }
+.technical-index-table thead th:nth-child(3) { width: 27%; }
+.technical-index-table thead th:nth-child(4) { width: 29%; }
+.technical-index-table tbody th,
+.technical-index-table tbody td {
+  padding: 10px;
+  border-width: 0 1px 1px 0;
+  border-color: var(--line);
+  border-style: solid;
+  background: #ffffff;
+  color: #3e5064;
+  font-size: 9.6px;
+  line-height: 1.34;
+  font-weight: 650;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.technical-index-table tbody th {
+  border-left: 4px solid var(--project-accent);
+  color: var(--navy);
+}
+.technical-index-table tbody th span,
+.technical-index-table tbody th b { display: block; }
+.technical-index-table tbody th span {
+  color: var(--project-accent);
+  font-size: 8px;
+  font-weight: 950;
+}
+.technical-index-table tbody th b {
+  margin-top: 3px;
+  font-size: 11px;
+  line-height: 1.2;
+}
+.boundary-index {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 2px solid var(--navy);
+}
+.boundary-index-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 7px;
+}
+.boundary-index-head h3 { margin: 0; font-size: 13px; }
+.boundary-index-head p {
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+}
+.boundary-index-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 6px;
+}
+.boundary-index-grid article {
+  min-width: 0;
+  padding: 7px 8px;
+  border-left: 3px solid var(--project-accent);
+  background: #f7f9fc;
+}
+.boundary-index-grid b {
+  display: block;
+  color: var(--navy);
+  font-size: 8px;
+  font-weight: 900;
+}
+.boundary-index-grid p {
+  margin-top: 3px;
+  color: #53657a;
+  font-size: 8.6px;
+  line-height: 1.28;
+  font-weight: 650;
+  word-break: keep-all;
+}
 .case-links {
   flex: 0 0 auto;
   border-collapse: collapse;
@@ -1926,12 +2076,12 @@ tr:nth-child(even) td { background: #f8fafc; }
   .capability-card .pill { font-size: 9.5px; }
 
   .case-page {
-    grid-template-columns: minmax(290px, 330px) minmax(0, 1fr);
+    grid-template-columns: minmax(240px, 270px) minmax(0, 1fr);
     padding: 0;
   }
   .case-rail {
     min-height: 1000px;
-    padding: 52px 38px 48px 44px;
+    padding: 50px 28px 48px 32px;
   }
   .rail-kicker { font-size: 12px; }
   .case-number { font-size: 52px; }
@@ -1964,19 +2114,19 @@ tr:nth-child(even) td { background: #f8fafc; }
   .case-decision-card h4 { font-size: 12px; }
   .case-decision-card p { font-size: 10.5px; }
   .case-code-symbol { font-size: 11.5px; }
-  .case-code-path { font-size: 8.5px; }
-  .case-code-snippet { font-size: 9.2px; }
-  .case-code-description { font-size: 10px; }
+  .case-code-path { font-size: 9.5px; }
+  .case-code-snippet { font-size: 10.5px; }
+  .case-code-description { font-size: 10.5px; }
   .case-code-test,
-  .case-code-test b { font-size: 8.5px; }
+  .case-code-test b { font-size: 9.3px; }
   .case-evidence-section .list li { font-size: 11px; }
   .case-closeout span { font-size: 9px; }
   .case-closeout p { font-size: 11px; }
   .case-source-links { font-size: 10px; }
   .case-page > .footer-note {
-    left: 44px;
+    left: 32px;
     bottom: 24px;
-    width: 242px;
+    width: 200px;
     font-size: 10px;
   }
 
@@ -2025,8 +2175,27 @@ tr:nth-child(even) td { background: #f8fafc; }
   .case-main { min-height: 0; }
   .case-main { padding: 32px 24px 38px; }
   .case-architecture-flow { grid-template-columns: repeat(3, 1fr); }
+  .case-process-line {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    overflow: visible;
+  }
   .case-proof-grid { grid-template-columns: 1fr; }
   .case-problem-band { grid-template-columns: 1fr; }
+  .technical-index-table,
+  .technical-index-table tbody,
+  .technical-index-table tr,
+  .technical-index-table th,
+  .technical-index-table td { display: block; width: 100%; }
+  .technical-index-table thead { display: none; }
+  .technical-index-table tbody tr {
+    margin-bottom: 10px;
+    border: 1px solid var(--line);
+  }
+  .technical-index-table tbody th,
+  .technical-index-table tbody td { border-width: 0 0 1px; }
+  .boundary-index-head { display: block; }
+  .boundary-index-head p { margin-top: 4px; }
+  .boundary-index-grid { grid-template-columns: 1fr; }
   .case-page > .footer-note { display: none; }
 }
 @media print {
@@ -2053,10 +2222,12 @@ tr:nth-child(even) td { background: #f8fafc; }
     padding-top: 16mm;
   }
   .cover h1 {
-    max-width: 180mm;
-    font-size: 40px;
+    max-width: 176mm;
+    font-size: 36px;
     line-height: 1.08;
-    white-space: nowrap;
+    white-space: normal;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
   .cover::before { height: 8mm; }
   .cover-list { margin-top: 12mm; }
@@ -2074,21 +2245,21 @@ tr:nth-child(even) td { background: #f8fafc; }
     border-top-width: 6mm;
   }
   .case-page {
-    grid-template-columns: 46mm 1fr;
-    gap: 8.5mm;
+    grid-template-columns: 38mm minmax(0, 1fr);
+    gap: 5mm;
     padding: 0;
   }
   .case-rail {
     height: 297mm;
     min-height: 0;
-    padding: 11mm 8mm 10mm 9mm;
+    padding: 10mm 5.5mm 9mm 7mm;
   }
-  .case-rail::before { width: 5mm; }
+  .case-rail::before { width: 3mm; }
   .case-main {
     height: 297mm;
     min-height: 0;
-    padding: 9mm 10.5mm 8mm 0;
-    gap: 3.5mm;
+    padding: 7mm 8mm 6mm 0;
+    gap: 2mm;
   }
   .stack-grid {
     grid-template-columns: 1fr;
@@ -2105,9 +2276,9 @@ tr:nth-child(even) td { background: #f8fafc; }
     height: 3.8mm;
   }
   .stack-token span {
-    font-size: 7px;
-    overflow-wrap: normal;
-    word-break: normal;
+    font-size: 7.8px;
+    overflow-wrap: anywhere;
+    word-break: break-word;
   }
   .cover-stack-mini {
     gap: 1.4mm;
@@ -2323,11 +2494,12 @@ tr:nth-child(even) td { background: #f8fafc; }
   }
   .case-main {
     display: grid;
-    grid-template-rows: auto 42mm 8mm 19mm 32mm minmax(78mm, 1fr) 22mm auto;
-    gap: 1.8mm;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 40mm 8mm 20mm 31mm minmax(96mm, 1fr) 23mm auto;
+    gap: 1.6mm;
     height: 297mm;
     min-height: 0;
-    padding: 7mm 10.5mm 5mm 0;
+    padding: 6.5mm 8mm 5mm 0;
   }
   .case-hero {
     min-height: 0;
@@ -2344,7 +2516,8 @@ tr:nth-child(even) td { background: #f8fafc; }
     line-height: 1.3;
   }
   .case-visual {
-    grid-template-rows: 26mm 14.5mm;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 25mm 13.8mm;
     gap: 1.2mm;
     min-height: 0;
   }
@@ -2386,7 +2559,7 @@ tr:nth-child(even) td { background: #f8fafc; }
     height: 3.7mm;
   }
   .case-arch-node strong {
-    font-size: 8px;
+    font-size: 8.7px;
     line-height: 1.08;
   }
   .case-arch-node em {
@@ -2411,13 +2584,13 @@ tr:nth-child(even) td { background: #f8fafc; }
     height: 3.8mm;
   }
   .case-proof-card b { font-size: 7.4px; }
-  .case-proof-card strong { font-size: 9.1px; }
-  .case-proof-card p { font-size: 7.8px; line-height: 1.16; }
+  .case-proof-card strong { font-size: 9.6px; }
+  .case-proof-card p { font-size: 8.2px; line-height: 1.18; }
   .case-process-line { height: 9mm; }
   .case-process-line .flow-item {
     min-height: 0;
     padding: 2.2mm 0.8mm;
-    font-size: 7.7px;
+    font-size: 8.4px;
   }
   .case-problem-band {
     grid-template-columns: 30mm 1fr;
@@ -2436,8 +2609,8 @@ tr:nth-child(even) td { background: #f8fafc; }
   .case-problem-band strong { font-size: 9px; }
   .case-problem-band p {
     margin-top: 0.8mm;
-    font-size: 8.4px;
-    line-height: 1.24;
+    font-size: 8.9px;
+    line-height: 1.28;
   }
   .case-decision-band {
     grid-template-rows: 6mm 1fr;
@@ -2464,14 +2637,14 @@ tr:nth-child(even) td { background: #f8fafc; }
   }
   .case-decision-card h4 {
     margin: 0 7mm 1.2mm 0;
-    font-size: 9.3px;
+    font-size: 9.7px;
   }
   .case-decision-card p {
-    font-size: 8.4px;
-    line-height: 1.24;
+    font-size: 8.8px;
+    line-height: 1.28;
   }
   .case-evidence-grid {
-    grid-template-columns: 1.34fr 0.66fr;
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.55fr);
     min-height: 0;
     gap: 3mm;
   }
@@ -2482,7 +2655,7 @@ tr:nth-child(even) td { background: #f8fafc; }
     padding-top: 1.8mm;
   }
   .case-code-list {
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, minmax(0, 1fr));
     flex: 1 1 auto;
     min-height: 0;
     gap: 0.8mm;
@@ -2492,13 +2665,14 @@ tr:nth-child(even) td { background: #f8fafc; }
     grid-template-columns: 1fr;
     gap: 0.6mm;
     min-height: 0;
-    padding: 1.1mm 1.5mm;
+    padding: 1.4mm 1.7mm;
   }
-  .case-code-symbol { font-size: 7.8px; }
-  .case-code-path { font-size: 5.9px; }
-  .case-code-snippet { font-size: 6.2px; line-height: 1.25; }
-  .case-code-description { font-size: 6.7px; line-height: 1.22; }
-  .case-code-test { font-size: 5.9px; }
+  .case-code-symbol { font-size: 8.5px; }
+  .case-code-path { font-size: 7.2px; }
+  .case-code-snippet { font-size: 8.2px; line-height: 1.3; }
+  .case-code-description { font-size: 8.4px; line-height: 1.28; }
+  .case-code-test,
+  .case-code-test b { font-size: 7.1px; }
   .case-evidence-section .list {
     display: flex;
     flex: 1 1 auto;
@@ -2509,8 +2683,8 @@ tr:nth-child(even) td { background: #f8fafc; }
     margin-top: 1.5mm;
   }
   .case-evidence-section .list li {
-    font-size: 8.2px;
-    line-height: 1.21;
+    font-size: 9.2px;
+    line-height: 1.3;
   }
   .case-closeout {
     height: 25mm;
@@ -2524,7 +2698,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   }
   .case-closeout span { font-size: 6.3px; }
   .case-closeout p { font-size: 8.3px; line-height: 1.24; }
-  .case-source-links { font-size: 7.7px; }
+  .case-source-links { font-size: 8.3px; }
   .appendix-project-card { padding: 2.5mm; }
   .appendix-project-card header {
     grid-template-columns: 7mm 1fr;
@@ -2556,26 +2730,28 @@ tr:nth-child(even) td { background: #f8fafc; }
   .cover-group-head span { font-size: 9.4px; }
   .cover-stack-mini span { font-size: 8.3px; }
 
-  .summary-project-head h3 { font-size: 15.2px; }
-  .summary-project-domain { font-size: 9.6px; }
+  .summary-project-head h3 { font-size: 16px; }
+  .summary-project-domain { font-size: 10px; }
   .summary-project-tier { font-size: 8.3px; }
   .summary-project-statement { font-size: 10.7px; }
-  .summary-project-facts dt { font-size: 8.8px; }
-  .summary-project-facts dd { font-size: 9.6px; }
+  .summary-project-facts dt { font-size: 9.6px; }
+  .summary-project-facts dd { font-size: 10.8px; line-height: 1.4; }
   .summary-mini-path span { font-size: 8.8px; }
   .summary-project-card .tech-chip span { font-size: 8px; }
 
-  .capability-card h3 { font-size: 15.2px; }
-  .capability-description { font-size: 10.8px; }
-  .capability-path span { font-size: 8.8px; }
+  .capability-card h3 { font-size: 16px; }
+  .capability-description { font-size: 11px; }
+  .capability-path span { font-size: 9.4px; }
+  .capability-result,
+  .capability-projects { font-size: 10.2px; }
   .capability-code b,
   .capability-code span { font-size: 8.2px; }
   .capability-evidence li { font-size: 9.8px; }
   .capability-card .pill { font-size: 8.3px; }
 
-  .rail-domain { font-size: 12px; }
+  .rail-domain { font-size: 10.4px; }
   .rail-text,
-  .rail-list li { font-size: 11.2px; }
+  .rail-list li { font-size: 10.2px; }
   .stack-grid { gap: 1.5mm; }
   .stack-token { min-height: 7.5mm; }
   .stack-token span { font-size: 8.4px; }
@@ -2595,12 +2771,34 @@ tr:nth-child(even) td { background: #f8fafc; }
   .case-problem-band p { font-size: 10.2px; }
   .case-decision-card h4 { font-size: 10.4px; }
   .case-decision-card p { font-size: 9.8px; }
-  .case-code-symbol { font-size: 8.8px; }
-  .case-code-path { font-size: 7.1px; }
-  .case-code-snippet { font-size: 7.7px; line-height: 1.2; }
-  .case-code-description { font-size: 8px; line-height: 1.18; }
+  .case-code-symbol { font-size: 9px; }
+  .case-code-path { font-size: 7.5px; }
+  .case-code-snippet { font-size: 8.5px; line-height: 1.3; }
+  .case-code-description { font-size: 8.6px; line-height: 1.28; }
   .case-code-test,
-  .case-code-test b { font-size: 7.1px; }
+  .case-code-test b { font-size: 7.3px; }
+  .case-page.code-dense .case-main {
+    grid-template-rows: auto 38mm 8mm 19mm 28mm minmax(104mm, 1fr) 20mm auto;
+    gap: 1.25mm;
+  }
+  .case-page.code-dense .case-code-list {
+    gap: 0.55mm;
+    margin-top: 1.1mm;
+  }
+  .case-page.code-dense .case-code-row {
+    gap: 0.4mm;
+    padding: 1mm 1.4mm;
+  }
+  .case-page.code-dense .case-code-snippet {
+    padding: 1mm 1.2mm;
+  }
+  .case-page.code-dense .case-code-description,
+  .case-page.code-dense .case-code-test {
+    line-height: 1.2;
+  }
+  .case-page.code-dense .case-closeout {
+    height: 20mm;
+  }
   .case-evidence-section .list {
     justify-content: flex-start;
     gap: 5mm;
@@ -2611,10 +2809,10 @@ tr:nth-child(even) td { background: #f8fafc; }
   .case-closeout p { font-size: 9.4px; }
   .case-source-links { font-size: 8.5px; }
   .case-page > .footer-note {
-    left: 9mm;
+    left: 7mm;
     right: auto;
     bottom: 5mm;
-    width: 29mm;
+    width: 24mm;
     color: rgba(255,255,255,0.58);
     font-size: 7.4px;
     line-height: 1.2;
@@ -2639,42 +2837,69 @@ tr:nth-child(even) td { background: #f8fafc; }
   .appendix-links { font-size: 8.3px; }
   .appendix-legend b { font-size: 7.6px; }
   .appendix-legend span { font-size: 8.5px; }
+  .technical-index-table {
+    flex: 0 0 166mm;
+  }
+  .technical-index-table thead th {
+    padding: 2.2mm 2.4mm;
+    font-size: 9px;
+  }
+  .technical-index-table tbody tr { height: 25.5mm; }
+  .technical-index-table tbody th,
+  .technical-index-table tbody td {
+    padding: 2.4mm;
+    font-size: 9.4px;
+    line-height: 1.36;
+  }
+  .technical-index-table tbody th span { font-size: 8px; }
+  .technical-index-table tbody th b { font-size: 10.5px; }
+  .boundary-index {
+    margin-top: 2.5mm;
+    padding-top: 2.5mm;
+  }
+  .boundary-index-head { margin-bottom: 1.8mm; }
+  .boundary-index-head h3 { font-size: 11px; }
+  .boundary-index-head p { font-size: 8.5px; }
+  .boundary-index-grid { gap: 1.5mm; }
+  .boundary-index-grid article { padding: 1.7mm 2mm; }
+  .boundary-index-grid b { font-size: 8px; }
+  .boundary-index-grid p { font-size: 8.8px; line-height: 1.3; }
 }
 </style>
 </head>
 <body>
 
-  <section class="page case-page" data-page="01" style="--case-accent: #2f80ed;">
+  <section class="page case-page code-dense" data-page="01" style="--case-accent: #2f80ed;">
     <aside class="case-rail">
-      <div class="rail-kicker">대표 프로젝트 · PROJECT CASE STUDY</div>
+      <div class="rail-kicker">백엔드 시스템 · 01</div>
       <div class="case-number">01</div>
       <h1 class="">StockRush</h1>
       <p class="rail-domain">분산 커머스 / 주문 상태 수렴 / 이벤트 기반 백엔드</p>
       <div class="rail-block">
-        <span class="rail-label">ROLE</span>
+        <span class="rail-label">담당 범위</span>
         <p class="rail-text">개인 프로젝트 / 설계, 구현, 검증</p>
       </div>
       <div class="rail-block">
-        <span class="rail-label">SKILLS</span>
+        <span class="rail-label">핵심 역량</span>
         <ul class="rail-list"><li>분산 트랜잭션</li><li>이벤트 수렴</li><li>Gateway 보안</li><li>장애 복구</li></ul>
       </div>
       <div class="rail-block">
-        <span class="rail-label">STACK</span>
-        <div class="stack-grid"><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.5 5.5C13 4 7 7.8 6.2 13.3c-.5 3.7 2.8 6.2 6.4 5.1 3.6-1.1 5.8-5.2 5-8.8"/><path d="M6 18c2.6-4.8 6.4-7.5 11.5-8.6"/></svg><span>Spring Boot</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="12" r="2.2"/><circle cx="16" cy="6" r="2.2"/><circle cx="16" cy="18" r="2.2"/><path d="M8 11l6-4M8 13l6 4"/></svg><span>Kafka</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7" ry="3"/><path d="M5 5.5v9c0 1.7 3.1 3 7 3s7-1.3 7-3v-9"/><path d="M5 10c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg><span>PostgreSQL</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.2-2.6 7.7-7 10-4.4-2.3-7-5.8-7-10V6l7-3z"/><path d="M9 12l2 2 4-5"/></svg><span>Keycloak</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14h15c-.6 3-2.8 5-6.8 5H8.5C6 19 4.3 17.2 4 14z"/><path d="M7 11h3v3H7zM10 11h3v3h-3zM13 11h3v3h-3zM10 8h3v3h-3zM13 8h3v3h-3z"/><path d="M19 11c1.1 0 1.8-.4 2.2-1.2"/></svg><span>Docker Compose</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h4M14 13h2"/></svg><span>Android smoke</span></div></div>
+        <span class="rail-label">주요 기술</span>
+        <div class="stack-grid"><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.5 5.5C13 4 7 7.8 6.2 13.3c-.5 3.7 2.8 6.2 6.4 5.1 3.6-1.1 5.8-5.2 5-8.8"/><path d="M6 18c2.6-4.8 6.4-7.5 11.5-8.6"/></svg><span>Spring Boot</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="12" r="2.2"/><circle cx="16" cy="6" r="2.2"/><circle cx="16" cy="18" r="2.2"/><path d="M8 11l6-4M8 13l6 4"/></svg><span>Kafka</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7" ry="3"/><path d="M5 5.5v9c0 1.7 3.1 3 7 3s7-1.3 7-3v-9"/><path d="M5 10c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg><span>PostgreSQL</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.2-2.6 7.7-7 10-4.4-2.3-7-5.8-7-10V6l7-3z"/><path d="M9 12l2 2 4-5"/></svg><span>Keycloak</span></div></div>
       </div>
     </aside>
     <main class="case-main">
       <div class="case-hero">
-        <div class="kicker">PROJECT 01 · 분산 커머스</div>
-        <h2>부분 실패 뒤에도 주문 상태를 수렴시키는 이벤트 기반 커머스</h2>
-        <p>한정 재고 주문의 부분 실패와 중복 처리를 Saga, Transactional Outbox, 멱등 소비자로 제어하고 주문·재고·결제·조회 모델의 최종 상태 수렴을 장애 시나리오로 검증했습니다.</p>
+        <div class="kicker">문제 · 설계 · 실패 조건 · 검증 결과</div>
+        <h2>결제 지연과 이벤트 중복 뒤에도 주문 상태를 수렴시키는 커머스</h2>
+        <p>한정 재고 주문에서 결제 지연·이벤트 중복·Kafka 중단이 겹쳐도 주문을 취소·확정 상태로 수렴시키도록 Saga, Outbox, 멱등 소비자를 구현했습니다.</p>
       </div>
 
       <section class="case-visual" style="--case-accent: #2f80ed;">
         <div class="case-architecture flow">
           <div class="case-architecture-head">
-            <span>SYSTEM FLOW</span>
-            <b>01 / stockrush</b>
+            <span>시스템 흐름</span>
+            <b>실패 조건과 보호 경계</b>
           </div>
           <div class="case-architecture-flow">
           <div class="case-arch-node">
@@ -2753,7 +2978,7 @@ tr:nth-child(even) td { background: #f8fafc; }
           <h3>해결한 문제</h3>
         </div>
         <div>
-          <strong>부분 실패와 재시도 뒤 주문·재고·결제·조회 상태가 어긋나는 문제</strong>
+          <strong>재시도 뒤 주문·재고·결제·조회 상태가 서로 어긋남</strong>
           <p>동시 주문, 결제 실패와 지연, Kafka 중단, 이벤트 재처리 상황에서는 주문 상태와 재고 수량, 결제 결과, 조회 모델이 서로 다른 속도로 바뀝니다. 서비스 경계와 복구 흐름을 코드와 시나리오로 분리해 최종 상태 수렴을 검증했습니다.</p>
         </div>
       </section>
@@ -2792,42 +3017,42 @@ tr:nth-child(even) td { background: #f8fafc; }
         <div class="case-code-row">
           <div class="case-code-head">
             <code class="case-code-symbol">PersistentCreateOrderService.create</code>
-            <span class="case-code-path">…/application/PersistentCreateOrderService.java</span>
+            <span class="case-code-path"><b>파일</b>services/order-service/src/main/java/com/stockrush/order/application/PersistentCreateOrderService.java</span>
           </div>
           <pre class="case-code-snippet">boolean saved = orderRepository.saveIfAbsent(result.order(), command.idempotencyKey());
 if (!saved) {
     return CreateOrderResult.replayed(replayOrder(command.idempotencyKey(), command.memberId()));
 }
 outboxEventRepository.save(result.outboxEvent());</pre>
-          <p class="case-code-description">주문 저장과 outbox 기록을 같은 트랜잭션에 두고 멱등 충돌은 기존 주문 재조회로 수렴시킵니다.</p>
-          <div class="case-code-test"><b>TEST</b><span title="PersistentCreateOrderServiceIntegrationTest.persists_order_items_and_pending_outbox_event_together">PersistentCreateOrderServiceIntegrationTest</span></div>
+          <p class="case-code-description"><b>보호 규칙</b>주문 저장과 outbox 기록을 같은 트랜잭션에 두고 멱등 충돌은 기존 주문 재조회로 수렴시킵니다.</p>
+          <div class="case-code-test"><b>연결 테스트</b><span>services/order-service/src/test/java/com/stockrush/order/infra/persistence/PersistentCreateOrderServiceIntegrationTest.java<br>PersistentCreateOrderServiceIntegrationTest.persists_order_items_and_pending_outbox_event_together</span></div>
         </div>
 
         <div class="case-code-row">
           <div class="case-code-head">
             <code class="case-code-symbol">OrderSagaEventHandler.transitionOrder</code>
-            <span class="case-code-path">…/order/application/OrderSagaEventHandler.java</span>
+            <span class="case-code-path"><b>파일</b>services/order-service/src/main/java/com/stockrush/order/application/OrderSagaEventHandler.java</span>
           </div>
           <pre class="case-code-snippet">where order_id = :orderId
   and status not in (&#x27;CANCELLED&#x27;, &#x27;CONFIRMED&#x27;)
 
 return updated == 1;</pre>
-          <p class="case-code-description">종료 상태 주문의 추가 전이를 SQL에서 차단해 늦은 이벤트가 취소·확정 주문을 되살리지 못하게 합니다.</p>
-          <div class="case-code-test"><b>TEST</b><span title="OrderSagaEventHandlerIntegrationTest.ignores_payment_authorized_for_cancelled_order">OrderSagaEventHandlerIntegrationTest</span></div>
+          <p class="case-code-description"><b>보호 규칙</b>종료 상태 주문의 추가 전이를 SQL에서 차단해 늦은 이벤트가 취소·확정 주문을 되살리지 못하게 합니다.</p>
+          <div class="case-code-test"><b>연결 테스트</b><span>services/order-service/src/test/java/com/stockrush/order/application/OrderSagaEventHandlerIntegrationTest.java<br>OrderSagaEventHandlerIntegrationTest.ignores_payment_authorized_for_cancelled_order</span></div>
         </div>
 
         <div class="case-code-row">
           <div class="case-code-head">
             <code class="case-code-symbol">OutboxRelayService.claimPending</code>
-            <span class="case-code-path">…/infra/outbox/OutboxRelayService.java</span>
+            <span class="case-code-path"><b>파일</b>services/order-service/src/main/java/com/stockrush/order/infra/outbox/OutboxRelayService.java</span>
           </div>
           <pre class="case-code-snippet">where status = &#x27;PENDING&#x27;
   and (next_retry_at is null or next_retry_at &lt;= now())
 order by created_at, id
 limit :batchSize
 for update skip locked</pre>
-          <p class="case-code-description">재시도 가능 이벤트만 잠금 선점해 여러 relay의 중복 발행을 피하고 소진 실패를 FAILED로 남깁니다.</p>
-          <div class="case-code-test"><b>TEST</b><span title="OutboxRelayServiceIntegrationTest.marks_failed_when_publish_retry_count_is_exhausted">OutboxRelayServiceIntegrationTest</span></div>
+          <p class="case-code-description"><b>보호 규칙</b>재시도 가능 이벤트만 잠금 선점해 여러 relay의 중복 발행을 피하고 소진 실패를 FAILED로 남깁니다.</p>
+          <div class="case-code-test"><b>연결 테스트</b><span>services/order-service/src/test/java/com/stockrush/order/infra/outbox/OutboxRelayServiceIntegrationTest.java<br>OutboxRelayServiceIntegrationTest.marks_failed_when_publish_retry_count_is_exhausted</span></div>
         </div>
 </div>
         </section>
@@ -2841,17 +3066,17 @@ for update skip locked</pre>
       </div>
       <section class="case-closeout">
         <div>
-          <span>OUTCOME</span>
+          <span>구현 결과</span>
           <p>한정 판매 커머스의 동시 주문, 결제 실패/지연, 이벤트 발행 실패, 중복 처리, 운영자 보정을 재현 가능한 흐름으로 묶었습니다.</p>
         </div>
         <div>
-          <span>VERIFIED SCOPE</span>
+          <span>확인한 범위와 남은 경계</span>
           <p>코드와 통합 테스트로 멱등 소비·종료 상태 guard·relay retry를 다뤘으며 실결제·다중 리전·운영 규모 부하는 포함하지 않았습니다.</p>
         </div>
       </section>
-      <div class="case-source-links"><a href="https://github.com/cyson21/stockrush">Source</a><span> · </span><a href="../repos/stockrush/docs/test-strategy.md">Test Strategy</a><span> · </span><a href="project-01-stockrush-portfolio.pdf">Individual PDF</a></div>
+      <div class="case-source-links"><a href="https://github.com/cyson21/stockrush">코드 저장소</a><span> · </span><a href="../repos/stockrush/docs/test-strategy.md">설계·검증 문서</a></div>
     </main>
-    <div class="footer-note">손찬양 · PROJECT 01</div>
+    <div class="footer-note">손찬양 · 01</div>
   </section>
 
 </body>
