@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko-KR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>프로젝트 02 - Enterprise Policy RAG 포트폴리오</title>
+  <title>Enterprise Policy RAG | 손찬양 백엔드 프로젝트</title>
   <style>
 :root {
   --ink: #17202a;
@@ -20,7 +20,7 @@
 * { box-sizing: border-box; }
 html, body {
   margin: 0;
-  background: #080d16;
+  background: #eef0ed;
   color: var(--ink);
   font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 16px;
@@ -29,15 +29,7 @@ html, body {
 }
 @page { size: A4; margin: 0; }
 body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
-  background-size: 42px 42px;
-  mask-image: linear-gradient(to bottom, #000 0%, transparent 82%);
+  display: none;
 }
 .page {
   position: relative;
@@ -46,9 +38,9 @@ body::before {
   margin: 32px auto;
   padding: 40px;
   background: var(--paper);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 28px;
-  box-shadow: 0 26px 80px rgba(0,0,0,0.34);
+  border: 1px solid #cbd2cd;
+  border-radius: 6px;
+  box-shadow: 0 12px 36px rgba(23, 26, 29, 0.12);
   overflow: visible;
 }
 .page:last-child { page-break-after: auto; }
@@ -68,8 +60,8 @@ h2 { color: var(--navy); font-size: 23px; line-height: 1.18; font-weight: 850; m
 h3 { color: var(--navy); font-size: 14.7px; line-height: 1.22; font-weight: 850; margin-bottom: 5px; }
 a { color: var(--blue); text-decoration: none; font-weight: 800; }
 .cover {
-  color: #ffffff;
-  background: var(--navy);
+  color: var(--ink);
+  background: var(--paper);
   min-height: 760px;
   padding-top: 70px;
   overflow: hidden;
@@ -83,9 +75,9 @@ a { color: var(--blue); text-decoration: none; font-weight: 800; }
   height: 9px;
   background: var(--blue);
 }
-.cover::after { color: rgba(255,255,255,0.72); }
-.cover h1 { max-width: 920px; color: #ffffff; font-size: 42px; line-height: 1.1; margin-top: 8mm; }
-.cover .lead, .cover .kicker, .cover .caption, .cover .compact-note { color: rgba(255,255,255,0.84); }
+.cover::after { color: var(--muted); }
+.cover h1 { max-width: 920px; color: var(--navy); font-size: 42px; line-height: 1.16; margin-top: 0; }
+.cover .lead, .cover .kicker, .cover .caption, .cover .compact-note { color: var(--muted); }
 .kicker {
   color: var(--blue);
   font-size: 11.2px;
@@ -99,7 +91,7 @@ a { color: var(--blue); text-decoration: none; font-weight: 800; }
   line-height: 1.5;
   font-weight: 650;
 }
-.cover .lead { max-width: 166mm; margin-top: 6mm; color: rgba(255,255,255,0.9); font-size: 17px; }
+.cover .lead { max-width: 166mm; margin-top: 6mm; color: var(--muted); font-size: 17px; }
 .muted { color: var(--muted); }
 .section-head {
   display: flex;
@@ -646,22 +638,23 @@ tr:nth-child(even) td { background: #f8fafc; }
   margin-top: 12mm;
 }
 .cover-group {
-  border-top: 1px solid rgba(255,255,255,0.3);
+  border-top: 1px solid var(--line);
 }
 .cover-group-head {
   min-height: 12mm;
   padding-top: 5mm;
 }
-.cover-group-head strong {
+.cover-group-head h2 {
   display: block;
-  color: #ffffff;
+  margin: 0;
+  color: var(--navy);
   font-size: 11px;
   font-weight: 900;
 }
 .cover-group-head span {
   display: block;
   margin-top: 3px;
-  color: rgba(255,255,255,0.62);
+  color: var(--muted);
   font-size: 8.5px;
   font-weight: 700;
 }
@@ -673,21 +666,21 @@ tr:nth-child(even) td { background: #f8fafc; }
   align-items: start;
   min-height: 50mm;
   padding: 8mm 0;
-  border-bottom: 1px solid rgba(255,255,255,0.18);
+  border-bottom: 1px solid var(--line);
 }
 .cover-row .num {
-  color: #ffffff;
+  color: var(--blue);
   font-size: 20px;
   line-height: 1;
   font-weight: 900;
 }
 .cover-row h3 {
-  color: #ffffff;
+  color: var(--navy);
   font-size: 17px;
   margin-bottom: 4px;
 }
 .cover-row p {
-  color: rgba(255,255,255,0.72);
+  color: var(--muted);
   font-size: 11.4px;
   line-height: 1.38;
   font-weight: 650;
@@ -739,7 +732,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   min-height: 900px;
   padding: 46px 26px 42px 30px;
   color: #ffffff;
-  background: linear-gradient(180deg, #102033 0%, #18314d 100%);
+  background: #102033;
 }
 .case-rail::before {
   content: "";
@@ -884,10 +877,8 @@ tr:nth-child(even) td { background: #f8fafc; }
   min-height: 204px;
   padding: 18px;
   border: 1px solid #d8e2ee;
-  border-radius: 16px;
-  background:
-    linear-gradient(135deg, rgba(47,128,237,0.12), transparent 54%),
-    linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+  border-radius: 8px;
+  background: #f7faff;
   overflow: hidden;
 }
 .architecture-canvas::before {
@@ -929,7 +920,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   min-height: 86px;
   padding: 11px 8px 9px;
   border: 1px solid #cfdbe8;
-  border-radius: 13px;
+  border-radius: 8px;
   background: #ffffff;
   text-align: center;
   box-shadow: 0 10px 22px rgba(16,32,51,0.07);
@@ -962,7 +953,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   width: 31px;
   height: 31px;
   margin-bottom: 8px;
-  border-radius: 10px;
+  border-radius: 8px;
   color: #ffffff;
 }
 .icon-badge svg {
@@ -999,7 +990,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   align-items: center;
   padding: 10px 11px;
   border: 1px solid #cbd8e6;
-  border-radius: 12px;
+  border-radius: 8px;
   background: #ffffff;
 }
 .evidence-card svg {
@@ -1031,7 +1022,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   min-height: 32px;
   padding: 6px;
   border: 1px solid #d6e1ed;
-  border-radius: 10px;
+  border-radius: 8px;
   background: #f8fafc;
 }
 .tech-chip svg {
@@ -1050,10 +1041,8 @@ tr:nth-child(even) td { background: #f8fafc; }
   min-height: 156px;
   padding: 18px;
   border: 1px solid #d8e2ee;
-  border-radius: 14px;
-  background:
-    linear-gradient(135deg, rgba(47,128,237,0.12), transparent 58%),
-    #f8fafc;
+  border-radius: 8px;
+  background: #f8fafc;
   overflow: hidden;
 }
 .system-map::before {
@@ -1095,7 +1084,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   min-height: 78px;
   padding: 12px 8px 10px;
   border: 1px solid #cfd8e4;
-  border-radius: 12px;
+  border-radius: 8px;
   background: #ffffff;
   text-align: center;
   box-shadow: 0 8px 20px rgba(16,32,51,0.06);
@@ -1136,7 +1125,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   margin-top: 15px;
   padding: 10px 12px;
   border: 1px solid #cbd8e6;
-  border-radius: 12px;
+  border-radius: 8px;
   background: #ffffff;
 }
 .map-metric b {
@@ -1152,7 +1141,7 @@ tr:nth-child(even) td { background: #f8fafc; }
 }
 .chart-panel {
   padding: 14px 15px;
-  border-radius: 14px;
+  border-radius: 8px;
   background: #102033;
   color: #ffffff;
 }
@@ -1199,7 +1188,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   margin-top: 12px;
   padding: 9px 10px;
   border: 1px solid rgba(255,255,255,0.18);
-  border-radius: 10px;
+  border-radius: 8px;
   color: rgba(255,255,255,0.88);
   font-size: 10.2px;
   font-weight: 850;
@@ -1945,6 +1934,52 @@ tr:nth-child(even) td { background: #f8fafc; }
   font-weight: 650;
   word-break: keep-all;
 }
+.appendix-scope-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.appendix-scope-card {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--project-accent);
+  background: #ffffff;
+}
+.appendix-scope-card header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.appendix-scope-card header span {
+  color: var(--project-accent);
+  font-size: 11px;
+  font-weight: 900;
+}
+.appendix-scope-card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.appendix-scope-card dl {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0 0;
+}
+.appendix-scope-card dt {
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 850;
+}
+.appendix-scope-card dd {
+  margin: 3px 0 0;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.5;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
 .case-links {
   flex: 0 0 auto;
   border-collapse: collapse;
@@ -2005,7 +2040,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   line-height: 1;
   font-weight: 900;
 }
-.map-row h3 {
+.map-row h2 {
   font-size: 14.5px;
   margin-bottom: 2mm;
 }
@@ -2026,13 +2061,18 @@ tr:nth-child(even) td { background: #f8fafc; }
   border-left-color: #2f80ed;
   background: #f8fafc;
 }
+.route-panel .card h2 {
+  margin-bottom: 5px;
+  font-size: 14.7px;
+  line-height: 1.22;
+}
 @media screen {
   .page {
     width: min(1420px, calc(100vw - 32px));
     min-height: 880px;
     margin: 24px auto;
     padding: 48px 52px;
-    border-radius: 18px;
+    border-radius: 8px;
   }
   .cover {
     min-height: 880px;
@@ -2040,7 +2080,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   }
   .cover h1 { font-size: 54px; }
   .cover .lead { font-size: 20px; }
-  .cover-group-head strong { font-size: 14px; }
+  .cover-group-head h2 { font-size: 14px; }
   .cover-group-head span { font-size: 11px; }
   .cover-row .num { font-size: 24px; }
   .cover-row h3 { font-size: 20px; }
@@ -2726,7 +2766,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   .appendix-legend b { font-size: 6.9px; }
   .appendix-legend span { font-size: 7.8px; }
 
-  .cover-group-head strong { font-size: 12px; }
+  .cover-group-head h2 { font-size: 12px; }
   .cover-group-head span { font-size: 9.4px; }
   .cover-stack-mini span { font-size: 8.3px; }
 
@@ -2865,37 +2905,600 @@ tr:nth-child(even) td { background: #f8fafc; }
   .boundary-index-grid b { font-size: 8px; }
   .boundary-index-grid p { font-size: 8.8px; line-height: 1.3; }
 }
+
+/* Two-page case studies keep design context separate from implementation proof. */
+.case-page {
+  grid-template-columns: 230px minmax(0, 1fr);
+}
+.case-page .case-rail {
+  background: #102033;
+}
+.case-project-name {
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 850;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.case-project-name.compact { font-size: 18px; }
+.case-project-name.ultra-compact { font-size: 16px; }
+.case-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 44px 46px 40px;
+}
+.case-hero h1 {
+  max-width: 760px;
+  margin-top: 8px;
+  color: var(--navy);
+  font-size: 29px;
+  line-height: 1.25;
+  font-weight: 850;
+  word-break: keep-all;
+}
+.case-section-heading h3 {
+  padding-left: 10px;
+  border-left: 4px solid var(--case-accent);
+  font-size: 14px;
+}
+.case-evidence-page .case-evidence-section {
+  display: block;
+}
+.case-evidence-page .case-code-list {
+  grid-template-rows: none;
+  gap: 10px;
+}
+.case-evidence-page .case-code-row {
+  gap: 7px;
+  padding: 13px 15px;
+}
+.case-evidence-page .case-code-symbol { font-size: 11.5px; }
+.case-evidence-page .case-code-path { font-size: 10px; }
+.case-evidence-page .case-code-snippet { font-size: 10.5px; line-height: 1.45; }
+.case-evidence-page .case-code-description { font-size: 11px; line-height: 1.5; }
+.case-evidence-page .case-code-test,
+.case-evidence-page .case-code-test b { font-size: 9.5px; line-height: 1.45; }
+.case-verification-section .list {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+.case-verification-section .list li {
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+.capability-list {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+.capability-row {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.65fr) minmax(0, 1.35fr);
+  gap: 24px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.capability-row header,
+.capability-row dl,
+.capability-row dl div { min-width: 0; }
+.capability-row h3 {
+  font-size: 16px;
+  line-height: 1.35;
+}
+.capability-row header p {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.capability-row dl {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+.capability-row dl div {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 10px;
+}
+.capability-row dt {
+  color: var(--blue);
+  font-size: 9px;
+  font-weight: 850;
+}
+.capability-row dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 10.5px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+@media print {
+  .case-page {
+    grid-template-columns: 48mm minmax(0, 1fr);
+    gap: 0;
+  }
+  .case-rail {
+    height: 297mm;
+    padding: 12mm 6mm 10mm 8mm;
+  }
+  .case-number {
+    margin-top: 8mm;
+    font-size: 30pt;
+  }
+  .case-project-name,
+  .case-project-name.compact,
+  .case-project-name.ultra-compact {
+    margin-top: 5mm;
+    font-size: 15pt;
+    line-height: 1.28;
+  }
+  .rail-domain {
+    margin-top: 4mm;
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .rail-block {
+    margin-top: 7mm;
+    padding-top: 4mm;
+  }
+  .rail-label {
+    margin-bottom: 2mm;
+    font-size: 8.5pt;
+  }
+  .rail-text,
+  .rail-list li {
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .stack-grid { gap: 2mm; }
+  .stack-token {
+    min-height: 9mm;
+    padding: 1.8mm 1.5mm;
+  }
+  .stack-token span {
+    font-size: 8.5pt;
+    line-height: 1.35;
+  }
+  .case-main {
+    display: flex;
+    flex-direction: column;
+    height: 297mm;
+    gap: 4mm;
+    padding: 10mm 9mm 8mm;
+  }
+  .case-hero {
+    min-height: 0;
+    padding-bottom: 4mm;
+  }
+  .case-hero h1 {
+    margin-top: 2mm;
+    font-size: 18pt;
+    line-height: 1.28;
+  }
+  .case-hero p {
+    margin-top: 2.5mm;
+    font-size: 10pt;
+    line-height: 1.55;
+  }
+  .case-visual {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 2mm;
+  }
+  .case-architecture {
+    min-height: 30mm;
+    padding: 3mm;
+  }
+  .case-architecture::before { top: 16mm; }
+  .case-architecture-head span,
+  .case-architecture-head b { font-size: 8.5pt; }
+  .case-arch-node {
+    min-height: 20mm;
+    padding: 2mm 1mm;
+  }
+  .case-arch-node strong {
+    font-size: 8.5pt;
+    line-height: 1.3;
+  }
+  .case-arch-node em { font-size: 7.5pt; }
+  .case-proof-card {
+    min-height: 17mm;
+    padding: 2mm;
+  }
+  .case-proof-card b { font-size: 8pt; }
+  .case-proof-card strong { font-size: 9.5pt; line-height: 1.3; }
+  .case-proof-card p { font-size: 8.5pt; line-height: 1.4; }
+  .case-process-line {
+    height: auto;
+  }
+  .case-process-line .flow-item {
+    min-height: 10mm;
+    padding: 2.8mm 1mm;
+    font-size: 8.5pt;
+    line-height: 1.35;
+  }
+  .case-problem-band {
+    grid-template-columns: 34mm 1fr;
+    gap: 4mm;
+    height: auto;
+    min-height: 27mm;
+    padding: 3mm 0;
+  }
+  .case-section-heading h3 {
+    padding-left: 2.5mm;
+    border-left-width: 1mm;
+    font-size: 11pt;
+    line-height: 1.35;
+  }
+  .case-problem-band strong {
+    font-size: 10pt;
+    line-height: 1.45;
+  }
+  .case-problem-band p {
+    margin-top: 1.5mm;
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .case-decision-band {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 2.5mm;
+  }
+  .case-decision-grid {
+    height: auto;
+    gap: 2.5mm;
+  }
+  .case-decision-card {
+    display: block;
+    height: auto;
+    min-height: 31mm;
+    padding: 3mm;
+  }
+  .case-decision-card > span { display: none; }
+  .case-decision-card h4 {
+    margin: 0 0 2mm;
+    font-size: 10.5pt;
+    line-height: 1.35;
+  }
+  .case-decision-card p {
+    font-size: 9pt;
+    line-height: 1.5;
+  }
+  .case-closeout {
+    height: auto;
+    margin-top: auto;
+  }
+  .case-closeout > div {
+    min-height: 31mm;
+    padding: 3mm;
+  }
+  .case-closeout span { font-size: 8.5pt; }
+  .case-closeout p {
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .case-evidence-page .case-main {
+    gap: 4mm;
+  }
+  .case-evidence-page .case-evidence-section {
+    display: block;
+    flex: 0 0 auto;
+    padding-top: 2.5mm;
+  }
+  .case-evidence-page .case-code-list {
+    display: grid;
+    grid-template-rows: none;
+    gap: 2mm;
+    margin-top: 2.5mm;
+  }
+  .case-evidence-page .case-code-row {
+    display: grid;
+    gap: 1.4mm;
+    padding: 2.5mm 3mm;
+  }
+  .case-evidence-page .case-code-symbol { font-size: 9pt; }
+  .case-evidence-page .case-code-path { font-size: 8.5pt; line-height: 1.4; }
+  .case-evidence-page .case-code-snippet { font-size: 8.5pt; line-height: 1.4; }
+  .case-evidence-page .case-code-description { font-size: 9.3pt; line-height: 1.45; }
+  .case-evidence-page .case-code-test,
+  .case-evidence-page .case-code-test b { font-size: 8.3pt; line-height: 1.4; }
+  .case-verification-section .list {
+    display: grid;
+    gap: 2mm;
+    margin-top: 2.5mm;
+    padding-top: 0;
+  }
+  .case-verification-section .list li {
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .case-source-links {
+    margin-top: auto;
+    font-size: 8.5pt;
+    line-height: 1.4;
+  }
+  .case-page > .footer-note {
+    left: 8mm;
+    bottom: 5mm;
+    width: 34mm;
+    font-size: 7.5pt;
+    line-height: 1.3;
+    white-space: normal;
+  }
+  .capability-list {
+    flex: 1 1 auto;
+  }
+  .capability-row {
+    grid-template-columns: 47mm minmax(0, 1fr);
+    gap: 6mm;
+    padding: 4mm 0;
+  }
+  .capability-row h3 {
+    font-size: 12pt;
+    line-height: 1.35;
+  }
+  .capability-row header p {
+    margin-top: 1.5mm;
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .capability-row dl {
+    gap: 2mm;
+  }
+  .capability-row dl div {
+    grid-template-columns: 22mm minmax(0, 1fr);
+    gap: 3mm;
+  }
+  .capability-row dt {
+    font-size: 8.5pt;
+  }
+  .capability-row dd {
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+}
+
+/* A case study stays on one A4 page by selecting one complete evidence set. */
+.rail-index {
+  color: rgba(255,255,255,0.72);
+  font-size: 11px;
+  font-weight: 850;
+}
+.case-study-page .case-main {
+  gap: 14px;
+  padding: 38px 42px 34px;
+}
+.case-study-page .case-headline {
+  max-width: 760px;
+  margin: 8px 0 0;
+  color: var(--navy);
+  font-size: 29px;
+  line-height: 1.25;
+  font-weight: 850;
+  word-break: keep-all;
+}
+.case-study-page .case-subheading {
+  margin: 0;
+  padding-left: 10px;
+  border-left: 4px solid var(--case-accent);
+  color: var(--navy);
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 850;
+}
+.case-study-page .case-decision-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.case-study-page .case-evidence-grid {
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+}
+.case-study-page .case-code-list {
+  grid-template-rows: none;
+}
+.case-study-page .case-verification-section .list {
+  display: grid;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .case-study-page .case-decision-grid,
+  .case-study-page .case-evidence-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .case-study-page .case-rail {
+    height: 297mm;
+    padding: 12mm 6mm 10mm 8mm;
+  }
+  .case-study-page .rail-index {
+    font-size: 8.5pt;
+    line-height: 1.4;
+  }
+  .case-study-page .case-project-name,
+  .case-study-page .case-project-name.compact,
+  .case-study-page .case-project-name.ultra-compact {
+    margin-top: 5mm;
+    font-size: 15pt;
+    line-height: 1.3;
+  }
+  .case-study-page .case-main {
+    display: flex;
+    height: 297mm;
+    gap: 2.7mm;
+    padding: 8mm 8mm 7mm;
+  }
+  .case-study-page .case-hero {
+    padding-bottom: 3mm;
+  }
+  .case-study-page .case-headline {
+    font-size: 17pt;
+    line-height: 1.28;
+  }
+  .case-study-page .case-hero p {
+    margin-top: 2mm;
+    font-size: 10pt;
+    line-height: 1.55;
+  }
+  .case-study-page .case-visual {
+    gap: 1.8mm;
+  }
+  .case-study-page .case-architecture {
+    min-height: 28mm;
+    padding: 2.5mm;
+  }
+  .case-study-page .case-architecture::before { top: 15mm; }
+  .case-study-page .case-architecture-head span,
+  .case-study-page .case-architecture-head b { font-size: 8.5pt; }
+  .case-study-page .case-arch-node {
+    min-height: 18mm;
+    padding: 1.5mm 1mm;
+  }
+  .case-study-page .case-arch-node strong { font-size: 8.5pt; line-height: 1.3; }
+  .case-study-page .case-arch-node em { font-size: 8pt; }
+  .case-study-page .case-proof-card {
+    min-height: 16mm;
+    padding: 1.8mm;
+  }
+  .case-study-page .case-proof-card b { font-size: 8pt; }
+  .case-study-page .case-proof-card strong { font-size: 9.5pt; line-height: 1.3; }
+  .case-study-page .case-proof-card p { font-size: 8.5pt; line-height: 1.4; }
+  .case-study-page .case-problem-band {
+    grid-template-columns: 31mm minmax(0, 1fr);
+    gap: 3mm;
+    min-height: 23mm;
+    padding: 2.5mm 0;
+  }
+  .case-study-page .case-subheading {
+    padding-left: 2.5mm;
+    border-left-width: 1mm;
+    font-size: 11pt;
+    line-height: 1.35;
+  }
+  .case-study-page .case-problem-band strong { font-size: 10pt; line-height: 1.45; }
+  .case-study-page .case-problem-band p {
+    margin-top: 1mm;
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .case-study-page .case-decision-band { gap: 2mm; }
+  .case-study-page .case-decision-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5mm;
+  }
+  .case-study-page .case-decision-card {
+    min-height: 25mm;
+    padding: 2.5mm;
+  }
+  .case-study-page .case-decision-card h4 {
+    margin-bottom: 1.5mm;
+    font-size: 10pt;
+    line-height: 1.35;
+  }
+  .case-study-page .case-decision-card p { font-size: 9.5pt; line-height: 1.5; }
+  .case-study-page .case-evidence-grid {
+    grid-template-columns: minmax(0, 1.38fr) minmax(0, 0.62fr);
+    gap: 3mm;
+  }
+  .case-study-page .case-evidence-section { padding-top: 2mm; }
+  .case-study-page .case-code-list { margin-top: 2mm; }
+  .case-study-page .case-code-row {
+    gap: 1mm;
+    padding: 2mm 2.5mm;
+  }
+  .case-study-page .case-code-symbol { font-size: 9pt; }
+  .case-study-page .case-code-path { font-size: 8.5pt; line-height: 1.4; }
+  .case-study-page .case-code-snippet { font-size: 8.5pt; line-height: 1.4; }
+  .case-study-page .case-code-description { font-size: 9.5pt; line-height: 1.5; }
+  .case-study-page .case-code-test,
+  .case-study-page .case-code-test b { font-size: 8.5pt; line-height: 1.4; }
+  .case-study-page .case-verification-section .list {
+    gap: 3mm;
+    margin-top: 2mm;
+    padding-top: 0;
+  }
+  .case-study-page .case-verification-section .list li {
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .case-study-page .case-closeout {
+    margin-top: auto;
+  }
+  .case-study-page .case-closeout > div {
+    min-height: 24mm;
+    padding: 2.5mm;
+  }
+  .case-study-page .case-closeout span { font-size: 8.5pt; }
+  .case-study-page .case-closeout p { font-size: 9.5pt; line-height: 1.5; }
+  .case-study-page .case-source-links {
+    margin-top: 0;
+    font-size: 8.5pt;
+    line-height: 1.4;
+  }
+  .page::after,
+  .footer-note,
+  .case-page > .footer-note { font-size: 8pt; }
+  .cover .lead { font-size: 10pt; line-height: 1.55; }
+  .cover-group-head h2 { font-size: 12pt; }
+  .cover-group-head span { font-size: 8.5pt; }
+  .cover-row .num { font-size: 11pt; }
+  .cover-row h3 { font-size: 12pt; }
+  .cover-row p { font-size: 9.5pt; line-height: 1.5; }
+  .map-hero p { font-size: 10pt; line-height: 1.55; }
+  .map-row .num { font-size: 11pt; }
+  .map-row h2 { font-size: 12pt; }
+  .map-row p { font-size: 9.5pt; line-height: 1.5; }
+  .route-panel .card h2 { font-size: 11pt; }
+  .route-panel .list li { font-size: 9.5pt; line-height: 1.5; }
+  .map-page .link-table th,
+  .map-page .link-table td { font-size: 9.5pt; line-height: 1.45; }
+  .summary-project-number { font-size: 8.5pt; }
+  .summary-project-head h3 { font-size: 12pt; }
+  .summary-project-domain { font-size: 8.5pt; line-height: 1.4; }
+  .summary-project-facts dt { font-size: 8.5pt; }
+  .summary-project-facts dd { font-size: 9.5pt; line-height: 1.5; }
+  .appendix-scope-grid { gap: 4mm; }
+  .appendix-scope-card { padding: 4mm; }
+  .appendix-scope-card header span { font-size: 8.5pt; }
+  .appendix-scope-card h3 { font-size: 12pt; }
+  .appendix-scope-card dl { gap: 2.5mm; margin-top: 3mm; }
+  .appendix-scope-card dt { font-size: 8.5pt; }
+  .appendix-scope-card dd { font-size: 9.5pt; line-height: 1.5; }
+}
 </style>
 </head>
 <body>
 
-  <section class="page case-page code-dense" data-page="01" style="--case-accent: #7c3aed;">
+  <section class="page case-page case-study-page" data-page="01" style="--case-accent: #1c5d99;">
+
     <aside class="case-rail">
-      <div class="rail-kicker">백엔드 시스템 · 02</div>
-      <div class="case-number">02</div>
-      <h1 class="compact">Enterprise Policy RAG</h1>
+      <div class="rail-index">프로젝트 02</div>
+      <p class="case-project-name compact">Enterprise Policy RAG</p>
       <p class="rail-domain">AI 백엔드 / RAG / 권한 검색 / 운영 관측</p>
       <div class="rail-block">
         <span class="rail-label">담당 범위</span>
         <p class="rail-text">2026.05-2026.06 / 개인 프로젝트 / AI 백엔드, 운영 콘솔, 검증 문서화</p>
       </div>
       <div class="rail-block">
-        <span class="rail-label">핵심 역량</span>
-        <ul class="rail-list"><li>RAG</li><li>권한 필터</li><li>근거 답변</li><li>운영 관측</li></ul>
-      </div>
-      <div class="rail-block">
         <span class="rail-label">주요 기술</span>
-        <div class="stack-grid"><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h5c1.7 0 3 1.3 3 3v3H8c-1.7 0-3 1.3-3 3v1"/><path d="M15 20h-5c-1.7 0-3-1.3-3-3v-3h9c1.7 0 3-1.3 3-3v-1"/><path d="M10 7h.1M14 17h.1"/></svg><span>Python API</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h4M14 13h2"/></svg><span>React/Vite</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7" ry="3"/><path d="M5 5.5v9c0 1.7 3.1 3 7 3s7-1.3 7-3v-9"/><path d="M5 10c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg><span>PostgreSQL/pgvector</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/><path d="M5 17l1 3 3 1M18 4l.7 2.2L21 7"/></svg><span>OpenAI 선택 경로</span></div></div>
+        <div class="stack-grid"><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4h5c1.7 0 3 1.3 3 3v3H8c-1.7 0-3 1.3-3 3v1"/><path d="M15 20h-5c-1.7 0-3-1.3-3-3v-3h9c1.7 0 3-1.3 3-3v-1"/><path d="M10 7h.1M14 17h.1"/></svg><span>Python API</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h4M14 13h2"/></svg><span>React/Vite</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7" ry="3"/><path d="M5 5.5v9c0 1.7 3.1 3 7 3s7-1.3 7-3v-9"/><path d="M5 10c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg><span>PostgreSQL/pgvector</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="14" rx="2"/><path d="M8 9h8M8 13h4M14 13h2"/></svg><span>외부 모델 선택 경로</span></div></div>
       </div>
     </aside>
+
     <main class="case-main">
       <div class="case-hero">
-        <div class="kicker">문제 · 설계 · 실패 조건 · 검증 결과</div>
-        <h2>비인가 검색과 근거 없는 생성을 답변 전에 차단하는 정책 RAG</h2>
-        <p>권한 밖 문서가 검색·인용되지 않고 근거가 없으면 LLM을 호출하지 않도록, 권한 선필터와 citation/refusal 정책을 답변 경로에 넣었습니다.</p>
+        <h1 class="case-headline">비인가 검색과 근거 없는 생성을 답변 전에 차단하는 정책 RAG</h1>
+        <p>권한 밖 문서를 검색·인용에서 제외하고 허용된 근거가 없으면 답변을 생성하지 않도록, 검색 전 권한 필터와 인용 검사를 적용했습니다.</p>
       </div>
 
-      <section class="case-visual" style="--case-accent: #7c3aed;">
+      <section class="case-visual" style="--case-accent: #1c5d99;">
         <div class="case-architecture flow">
           <div class="case-architecture-head">
             <span>시스템 흐름</span>
@@ -2944,8 +3547,8 @@ tr:nth-child(even) td { background: #f8fafc; }
             <span class="case-proof-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.2-2.6 7.7-7 10-4.4-2.3-7-5.8-7-10V6l7-3z"/><path d="M9 12l2 2 4-5"/></svg></span>
             <div>
               <b>권한 검색</b>
-              <strong>5 docs → allow 3</strong>
-              <p>workspace·owner·department 선필터</p>
+              <strong>문서 5건 → 허용 3건</strong>
+              <p>워크스페이스·소유자·부서 권한 선필터</p>
             </div>
           </article>
 
@@ -2953,29 +3556,25 @@ tr:nth-child(even) td { background: #f8fafc; }
             <span class="case-proof-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/><path d="M5 17l1 3 3 1M18 4l.7 2.2L21 7"/></svg></span>
             <div>
               <b>답변 거절</b>
-              <strong>evidence 0 → answer null</strong>
-              <p>citation 없이 provider 호출 생략</p>
+              <strong>근거 없음 → 답변 생성 안 함</strong>
+              <p>빈 인용과 거절 사유 반환</p>
             </div>
           </article>
 
           <article class="case-proof-card">
             <span class="case-proof-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3v5l-4 8a3 3 0 0 0 2.7 4h8.6A3 3 0 0 0 19 16l-4-8V3"/><path d="M8 3h8M8 15h8"/></svg></span>
             <div>
-              <b>Citation guard</b>
-              <strong>out-of-scope citation 0</strong>
+              <b>인용 범위 검사</b>
+              <strong>권한 밖 인용 0건</strong>
               <p>서비스 계층에서 접근 범위 재검사</p>
             </div>
           </article>
 </div>
       </section>
 
-      <div class="case-process-line">
-        <div class="flow-item">문서 등록</div><div class="flow-item">chunking</div><div class="flow-item">권한 필터 검색</div><div class="flow-item">인용 답변</div><div class="flow-item">질의 로그</div><div class="flow-item">운영 콘솔</div>
-      </div>
       <section class="case-problem-band">
         <div class="case-section-heading">
-          <span>01</span>
-          <h3>해결한 문제</h3>
+          <h2 class="case-subheading">해결한 문제</h2>
         </div>
         <div>
           <strong>비인가 문서 노출과 근거 없는 답변 생성</strong>
@@ -2984,34 +3583,24 @@ tr:nth-child(even) td { background: #f8fafc; }
       </section>
       <section class="case-decision-band">
         <div class="case-section-heading">
-          <span>02</span>
-          <h3>핵심 설계 판단</h3>
+          <h2 class="case-subheading">핵심 설계 판단</h2>
         </div>
         <div class="case-decision-grid">
         <article class="case-decision-card">
-          <span>01</span>
-          <h4>Authorization first</h4>
-          <p>답변 생성 전에 접근 가능한 chunk만 검색 후보로 제한</p>
+          <h4>권한 검사 우선</h4>
+          <p>답변 생성 전에 접근 가능한 문단만 검색 후보로 제한</p>
         </article>
 
         <article class="case-decision-card">
-          <span>02</span>
-          <h4>Evidence policy</h4>
-          <p>citation이 없으면 refusal을 반환하고 LLM 호출을 생략</p>
-        </article>
-
-        <article class="case-decision-card">
-          <span>03</span>
-          <h4>Replaceable boundary</h4>
-          <p>provider와 repository를 분리해 기본·외부 경로를 교체</p>
+          <h4>근거 기반 거절</h4>
+          <p>인용 근거가 없으면 답변과 인용을 비운 거절 응답을 반환</p>
         </article>
 </div>
       </section>
       <div class="case-evidence-grid">
         <section class="case-evidence-section">
           <div class="case-section-heading">
-            <span>03</span>
-            <h3>대표 코드 근거</h3>
+            <h2 class="case-subheading">대표 코드 근거</h2>
           </div>
           <div class="case-code-list">
         <div class="case-code-row">
@@ -3025,57 +3614,28 @@ if access_reason is None:
           <p class="case-code-description"><b>보호 규칙</b>저장소 필터 뒤에도 워크스페이스·소유자·부서 가시성을 다시 판정해 비인가 결과를 제거합니다.</p>
           <div class="case-code-test"><b>연결 테스트</b><span>tests/test_retrieval_permissions.py<br>test_retrieval_allows_public_owner_and_department_documents_only</span></div>
         </div>
-
-        <div class="case-code-row">
-          <div class="case-code-head">
-            <code class="case-code-symbol">AnswerService.answer</code>
-            <span class="case-code-path"><b>파일</b>app/answer.py</span>
-          </div>
-          <pre class="case-code-snippet">if not citations:
-    return AnswerResponse(
-        query=query.query,
-        answer=None,
-        citations=[],
-        refusal_reason=&quot;insufficient_evidence&quot;,
-    )</pre>
-          <p class="case-code-description"><b>보호 규칙</b>인용 근거가 없으면 provider 호출 없이 명시적인 거절 응답을 반환해 근거 없는 답변을 막습니다.</p>
-          <div class="case-code-test"><b>연결 테스트</b><span>tests/test_answer_api.py<br>test_answer_api_refuses_when_no_evidence_is_available</span></div>
-        </div>
-
-        <div class="case-code-row">
-          <div class="case-code-head">
-            <code class="case-code-symbol">run_eval</code>
-            <span class="case-code-path"><b>파일</b>app/evaluation.py</span>
-          </div>
-          <pre class="case-code-snippet">cases = [_run_case(services, request.workspace_id, case) for case in GOLDEN_CASES]
-retrieval_hit_rate = _rate(case.retrieval_hit for case in cases)
-citation_coverage = _rate(case.citation_covered for case in cases)</pre>
-          <p class="case-code-description"><b>보호 규칙</b>고정 평가 케이스를 실제 답변 경로로 실행해 검색 적중률과 인용 커버리지를 함께 계산합니다.</p>
-          <div class="case-code-test"><b>연결 테스트</b><span>tests/test_eval_api.py<br>test_eval_run_api_returns_retrieval_and_citation_metrics</span></div>
-        </div>
 </div>
         </section>
-        <section class="case-evidence-section">
+        <section class="case-evidence-section case-verification-section">
           <div class="case-section-heading">
-            <span>04</span>
-            <h3>검증 결과</h3>
+            <h2 class="case-subheading">검증 결과</h2>
           </div>
-          <ul class="list green"><li>권한 검색 테스트에서 문서 5개 중 허용 범위 3개만 반환하고 다른 workspace 결과는 0건으로 고정합니다.</li><li>근거가 없으면 answer=null, citations=[]를 반환하고 provider 호출을 생략합니다.</li><li>권한 밖 보안 문서가 검색 결과와 citation에 포함되지 않는 API 시나리오를 검증합니다.</li></ul>
+          <ul class="list green"><li>권한 검색 테스트에서 문서 5개 중 허용 범위 3개만 반환하고 다른 workspace 결과는 0건으로 고정합니다.</li><li>근거가 없으면 answer=null, citations=[]와 insufficient_evidence 사유를 반환합니다.</li></ul>
         </section>
       </div>
       <section class="case-closeout">
         <div>
           <span>구현 결과</span>
-          <p>권한 밖 문서를 검색·인용에서 차단하고, 근거가 없으면 provider 호출 없이 거절 응답을 반환합니다.</p>
+          <p>고정 문서 5건 중 권한이 허용된 3건만 검색하고, 허용된 근거가 없으면 답변과 인용을 비운 거절 응답을 반환했습니다.</p>
         </div>
         <div>
           <span>확인한 범위와 남은 경계</span>
-          <p>기본 경로는 메모리 저장소와 정적 데모로 검증했으며 PostgreSQL/pgvector·OpenAI live 경로와 운영 인증은 선택 검증으로 분리했습니다.</p>
+          <p>기본 검증은 고정 입력과 메모리 저장소에서 수행했으며 PostgreSQL/pgvector·외부 모델 연동과 운영 인증은 선택 실행 범위입니다.</p>
         </div>
       </section>
-      <div class="case-source-links"><a href="https://github.com/cyson21/enterprise-policy-rag">코드 저장소</a><span> · </span><a href="https://enterprise-policy-rag.vercel.app">실행 화면</a><span> · </span><a href="../repos/enterprise-policy-rag/docs/production-hardening-checklist.md">설계·검증 문서</a></div>
+      <div class="case-source-links"><a href="https://github.com/cyson21/enterprise-policy-rag">코드 저장소</a><span> · </span><a href="https://enterprise-policy-rag.vercel.app">실행 화면</a><span> · </span><a href="https://github.com/cyson21/enterprise-policy-rag/blob/main/docs/runbooks/production-hardening-checklist.md">설계·검증 문서</a></div>
     </main>
-    <div class="footer-note">손찬양 · 02</div>
+    <div class="footer-note">손찬양 · Enterprise Policy RAG</div>
   </section>
 
 </body>

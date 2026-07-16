@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="ko">
+<html lang="ko-KR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>프로젝트 03 - Member Event Consistency 포트폴리오</title>
+  <title>Member Event Consistency | 손찬양 백엔드 프로젝트</title>
   <style>
 :root {
   --ink: #17202a;
@@ -20,7 +20,7 @@
 * { box-sizing: border-box; }
 html, body {
   margin: 0;
-  background: #080d16;
+  background: #eef0ed;
   color: var(--ink);
   font-family: "Apple SD Gothic Neo", "Noto Sans KR", "Pretendard", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 16px;
@@ -29,15 +29,7 @@ html, body {
 }
 @page { size: A4; margin: 0; }
 body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background:
-    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
-  background-size: 42px 42px;
-  mask-image: linear-gradient(to bottom, #000 0%, transparent 82%);
+  display: none;
 }
 .page {
   position: relative;
@@ -46,9 +38,9 @@ body::before {
   margin: 32px auto;
   padding: 40px;
   background: var(--paper);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 28px;
-  box-shadow: 0 26px 80px rgba(0,0,0,0.34);
+  border: 1px solid #cbd2cd;
+  border-radius: 6px;
+  box-shadow: 0 12px 36px rgba(23, 26, 29, 0.12);
   overflow: visible;
 }
 .page:last-child { page-break-after: auto; }
@@ -68,8 +60,8 @@ h2 { color: var(--navy); font-size: 23px; line-height: 1.18; font-weight: 850; m
 h3 { color: var(--navy); font-size: 14.7px; line-height: 1.22; font-weight: 850; margin-bottom: 5px; }
 a { color: var(--blue); text-decoration: none; font-weight: 800; }
 .cover {
-  color: #ffffff;
-  background: var(--navy);
+  color: var(--ink);
+  background: var(--paper);
   min-height: 760px;
   padding-top: 70px;
   overflow: hidden;
@@ -83,9 +75,9 @@ a { color: var(--blue); text-decoration: none; font-weight: 800; }
   height: 9px;
   background: var(--blue);
 }
-.cover::after { color: rgba(255,255,255,0.72); }
-.cover h1 { max-width: 920px; color: #ffffff; font-size: 42px; line-height: 1.1; margin-top: 8mm; }
-.cover .lead, .cover .kicker, .cover .caption, .cover .compact-note { color: rgba(255,255,255,0.84); }
+.cover::after { color: var(--muted); }
+.cover h1 { max-width: 920px; color: var(--navy); font-size: 42px; line-height: 1.16; margin-top: 0; }
+.cover .lead, .cover .kicker, .cover .caption, .cover .compact-note { color: var(--muted); }
 .kicker {
   color: var(--blue);
   font-size: 11.2px;
@@ -99,7 +91,7 @@ a { color: var(--blue); text-decoration: none; font-weight: 800; }
   line-height: 1.5;
   font-weight: 650;
 }
-.cover .lead { max-width: 166mm; margin-top: 6mm; color: rgba(255,255,255,0.9); font-size: 17px; }
+.cover .lead { max-width: 166mm; margin-top: 6mm; color: var(--muted); font-size: 17px; }
 .muted { color: var(--muted); }
 .section-head {
   display: flex;
@@ -646,22 +638,23 @@ tr:nth-child(even) td { background: #f8fafc; }
   margin-top: 12mm;
 }
 .cover-group {
-  border-top: 1px solid rgba(255,255,255,0.3);
+  border-top: 1px solid var(--line);
 }
 .cover-group-head {
   min-height: 12mm;
   padding-top: 5mm;
 }
-.cover-group-head strong {
+.cover-group-head h2 {
   display: block;
-  color: #ffffff;
+  margin: 0;
+  color: var(--navy);
   font-size: 11px;
   font-weight: 900;
 }
 .cover-group-head span {
   display: block;
   margin-top: 3px;
-  color: rgba(255,255,255,0.62);
+  color: var(--muted);
   font-size: 8.5px;
   font-weight: 700;
 }
@@ -673,21 +666,21 @@ tr:nth-child(even) td { background: #f8fafc; }
   align-items: start;
   min-height: 50mm;
   padding: 8mm 0;
-  border-bottom: 1px solid rgba(255,255,255,0.18);
+  border-bottom: 1px solid var(--line);
 }
 .cover-row .num {
-  color: #ffffff;
+  color: var(--blue);
   font-size: 20px;
   line-height: 1;
   font-weight: 900;
 }
 .cover-row h3 {
-  color: #ffffff;
+  color: var(--navy);
   font-size: 17px;
   margin-bottom: 4px;
 }
 .cover-row p {
-  color: rgba(255,255,255,0.72);
+  color: var(--muted);
   font-size: 11.4px;
   line-height: 1.38;
   font-weight: 650;
@@ -739,7 +732,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   min-height: 900px;
   padding: 46px 26px 42px 30px;
   color: #ffffff;
-  background: linear-gradient(180deg, #102033 0%, #18314d 100%);
+  background: #102033;
 }
 .case-rail::before {
   content: "";
@@ -884,10 +877,8 @@ tr:nth-child(even) td { background: #f8fafc; }
   min-height: 204px;
   padding: 18px;
   border: 1px solid #d8e2ee;
-  border-radius: 16px;
-  background:
-    linear-gradient(135deg, rgba(47,128,237,0.12), transparent 54%),
-    linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+  border-radius: 8px;
+  background: #f7faff;
   overflow: hidden;
 }
 .architecture-canvas::before {
@@ -929,7 +920,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   min-height: 86px;
   padding: 11px 8px 9px;
   border: 1px solid #cfdbe8;
-  border-radius: 13px;
+  border-radius: 8px;
   background: #ffffff;
   text-align: center;
   box-shadow: 0 10px 22px rgba(16,32,51,0.07);
@@ -962,7 +953,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   width: 31px;
   height: 31px;
   margin-bottom: 8px;
-  border-radius: 10px;
+  border-radius: 8px;
   color: #ffffff;
 }
 .icon-badge svg {
@@ -999,7 +990,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   align-items: center;
   padding: 10px 11px;
   border: 1px solid #cbd8e6;
-  border-radius: 12px;
+  border-radius: 8px;
   background: #ffffff;
 }
 .evidence-card svg {
@@ -1031,7 +1022,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   min-height: 32px;
   padding: 6px;
   border: 1px solid #d6e1ed;
-  border-radius: 10px;
+  border-radius: 8px;
   background: #f8fafc;
 }
 .tech-chip svg {
@@ -1050,10 +1041,8 @@ tr:nth-child(even) td { background: #f8fafc; }
   min-height: 156px;
   padding: 18px;
   border: 1px solid #d8e2ee;
-  border-radius: 14px;
-  background:
-    linear-gradient(135deg, rgba(47,128,237,0.12), transparent 58%),
-    #f8fafc;
+  border-radius: 8px;
+  background: #f8fafc;
   overflow: hidden;
 }
 .system-map::before {
@@ -1095,7 +1084,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   min-height: 78px;
   padding: 12px 8px 10px;
   border: 1px solid #cfd8e4;
-  border-radius: 12px;
+  border-radius: 8px;
   background: #ffffff;
   text-align: center;
   box-shadow: 0 8px 20px rgba(16,32,51,0.06);
@@ -1136,7 +1125,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   margin-top: 15px;
   padding: 10px 12px;
   border: 1px solid #cbd8e6;
-  border-radius: 12px;
+  border-radius: 8px;
   background: #ffffff;
 }
 .map-metric b {
@@ -1152,7 +1141,7 @@ tr:nth-child(even) td { background: #f8fafc; }
 }
 .chart-panel {
   padding: 14px 15px;
-  border-radius: 14px;
+  border-radius: 8px;
   background: #102033;
   color: #ffffff;
 }
@@ -1199,7 +1188,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   margin-top: 12px;
   padding: 9px 10px;
   border: 1px solid rgba(255,255,255,0.18);
-  border-radius: 10px;
+  border-radius: 8px;
   color: rgba(255,255,255,0.88);
   font-size: 10.2px;
   font-weight: 850;
@@ -1945,6 +1934,52 @@ tr:nth-child(even) td { background: #f8fafc; }
   font-weight: 650;
   word-break: keep-all;
 }
+.appendix-scope-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.appendix-scope-card {
+  min-width: 0;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--project-accent);
+  background: #ffffff;
+}
+.appendix-scope-card header {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.appendix-scope-card header span {
+  color: var(--project-accent);
+  font-size: 11px;
+  font-weight: 900;
+}
+.appendix-scope-card h3 {
+  margin: 0;
+  font-size: 16px;
+}
+.appendix-scope-card dl {
+  display: grid;
+  gap: 10px;
+  margin: 12px 0 0;
+}
+.appendix-scope-card dt {
+  color: var(--blue);
+  font-size: 11px;
+  font-weight: 850;
+}
+.appendix-scope-card dd {
+  margin: 3px 0 0;
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.5;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
 .case-links {
   flex: 0 0 auto;
   border-collapse: collapse;
@@ -2005,7 +2040,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   line-height: 1;
   font-weight: 900;
 }
-.map-row h3 {
+.map-row h2 {
   font-size: 14.5px;
   margin-bottom: 2mm;
 }
@@ -2026,13 +2061,18 @@ tr:nth-child(even) td { background: #f8fafc; }
   border-left-color: #2f80ed;
   background: #f8fafc;
 }
+.route-panel .card h2 {
+  margin-bottom: 5px;
+  font-size: 14.7px;
+  line-height: 1.22;
+}
 @media screen {
   .page {
     width: min(1420px, calc(100vw - 32px));
     min-height: 880px;
     margin: 24px auto;
     padding: 48px 52px;
-    border-radius: 18px;
+    border-radius: 8px;
   }
   .cover {
     min-height: 880px;
@@ -2040,7 +2080,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   }
   .cover h1 { font-size: 54px; }
   .cover .lead { font-size: 20px; }
-  .cover-group-head strong { font-size: 14px; }
+  .cover-group-head h2 { font-size: 14px; }
   .cover-group-head span { font-size: 11px; }
   .cover-row .num { font-size: 24px; }
   .cover-row h3 { font-size: 20px; }
@@ -2726,7 +2766,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   .appendix-legend b { font-size: 6.9px; }
   .appendix-legend span { font-size: 7.8px; }
 
-  .cover-group-head strong { font-size: 12px; }
+  .cover-group-head h2 { font-size: 12px; }
   .cover-group-head span { font-size: 9.4px; }
   .cover-stack-mini span { font-size: 8.3px; }
 
@@ -2865,37 +2905,600 @@ tr:nth-child(even) td { background: #f8fafc; }
   .boundary-index-grid b { font-size: 8px; }
   .boundary-index-grid p { font-size: 8.8px; line-height: 1.3; }
 }
+
+/* Two-page case studies keep design context separate from implementation proof. */
+.case-page {
+  grid-template-columns: 230px minmax(0, 1fr);
+}
+.case-page .case-rail {
+  background: #102033;
+}
+.case-project-name {
+  margin-top: 20px;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: 850;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.case-project-name.compact { font-size: 18px; }
+.case-project-name.ultra-compact { font-size: 16px; }
+.case-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 44px 46px 40px;
+}
+.case-hero h1 {
+  max-width: 760px;
+  margin-top: 8px;
+  color: var(--navy);
+  font-size: 29px;
+  line-height: 1.25;
+  font-weight: 850;
+  word-break: keep-all;
+}
+.case-section-heading h3 {
+  padding-left: 10px;
+  border-left: 4px solid var(--case-accent);
+  font-size: 14px;
+}
+.case-evidence-page .case-evidence-section {
+  display: block;
+}
+.case-evidence-page .case-code-list {
+  grid-template-rows: none;
+  gap: 10px;
+}
+.case-evidence-page .case-code-row {
+  gap: 7px;
+  padding: 13px 15px;
+}
+.case-evidence-page .case-code-symbol { font-size: 11.5px; }
+.case-evidence-page .case-code-path { font-size: 10px; }
+.case-evidence-page .case-code-snippet { font-size: 10.5px; line-height: 1.45; }
+.case-evidence-page .case-code-description { font-size: 11px; line-height: 1.5; }
+.case-evidence-page .case-code-test,
+.case-evidence-page .case-code-test b { font-size: 9.5px; line-height: 1.45; }
+.case-verification-section .list {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+.case-verification-section .list li {
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+.capability-list {
+  display: grid;
+  border-top: 1px solid var(--line);
+}
+.capability-row {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.65fr) minmax(0, 1.35fr);
+  gap: 24px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.capability-row header,
+.capability-row dl,
+.capability-row dl div { min-width: 0; }
+.capability-row h3 {
+  font-size: 16px;
+  line-height: 1.35;
+}
+.capability-row header p {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.5;
+}
+.capability-row dl {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+.capability-row dl div {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 10px;
+}
+.capability-row dt {
+  color: var(--blue);
+  font-size: 9px;
+  font-weight: 850;
+}
+.capability-row dd {
+  margin: 0;
+  color: var(--ink);
+  font-size: 10.5px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+@media print {
+  .case-page {
+    grid-template-columns: 48mm minmax(0, 1fr);
+    gap: 0;
+  }
+  .case-rail {
+    height: 297mm;
+    padding: 12mm 6mm 10mm 8mm;
+  }
+  .case-number {
+    margin-top: 8mm;
+    font-size: 30pt;
+  }
+  .case-project-name,
+  .case-project-name.compact,
+  .case-project-name.ultra-compact {
+    margin-top: 5mm;
+    font-size: 15pt;
+    line-height: 1.28;
+  }
+  .rail-domain {
+    margin-top: 4mm;
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .rail-block {
+    margin-top: 7mm;
+    padding-top: 4mm;
+  }
+  .rail-label {
+    margin-bottom: 2mm;
+    font-size: 8.5pt;
+  }
+  .rail-text,
+  .rail-list li {
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .stack-grid { gap: 2mm; }
+  .stack-token {
+    min-height: 9mm;
+    padding: 1.8mm 1.5mm;
+  }
+  .stack-token span {
+    font-size: 8.5pt;
+    line-height: 1.35;
+  }
+  .case-main {
+    display: flex;
+    flex-direction: column;
+    height: 297mm;
+    gap: 4mm;
+    padding: 10mm 9mm 8mm;
+  }
+  .case-hero {
+    min-height: 0;
+    padding-bottom: 4mm;
+  }
+  .case-hero h1 {
+    margin-top: 2mm;
+    font-size: 18pt;
+    line-height: 1.28;
+  }
+  .case-hero p {
+    margin-top: 2.5mm;
+    font-size: 10pt;
+    line-height: 1.55;
+  }
+  .case-visual {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 2mm;
+  }
+  .case-architecture {
+    min-height: 30mm;
+    padding: 3mm;
+  }
+  .case-architecture::before { top: 16mm; }
+  .case-architecture-head span,
+  .case-architecture-head b { font-size: 8.5pt; }
+  .case-arch-node {
+    min-height: 20mm;
+    padding: 2mm 1mm;
+  }
+  .case-arch-node strong {
+    font-size: 8.5pt;
+    line-height: 1.3;
+  }
+  .case-arch-node em { font-size: 7.5pt; }
+  .case-proof-card {
+    min-height: 17mm;
+    padding: 2mm;
+  }
+  .case-proof-card b { font-size: 8pt; }
+  .case-proof-card strong { font-size: 9.5pt; line-height: 1.3; }
+  .case-proof-card p { font-size: 8.5pt; line-height: 1.4; }
+  .case-process-line {
+    height: auto;
+  }
+  .case-process-line .flow-item {
+    min-height: 10mm;
+    padding: 2.8mm 1mm;
+    font-size: 8.5pt;
+    line-height: 1.35;
+  }
+  .case-problem-band {
+    grid-template-columns: 34mm 1fr;
+    gap: 4mm;
+    height: auto;
+    min-height: 27mm;
+    padding: 3mm 0;
+  }
+  .case-section-heading h3 {
+    padding-left: 2.5mm;
+    border-left-width: 1mm;
+    font-size: 11pt;
+    line-height: 1.35;
+  }
+  .case-problem-band strong {
+    font-size: 10pt;
+    line-height: 1.45;
+  }
+  .case-problem-band p {
+    margin-top: 1.5mm;
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .case-decision-band {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 2.5mm;
+  }
+  .case-decision-grid {
+    height: auto;
+    gap: 2.5mm;
+  }
+  .case-decision-card {
+    display: block;
+    height: auto;
+    min-height: 31mm;
+    padding: 3mm;
+  }
+  .case-decision-card > span { display: none; }
+  .case-decision-card h4 {
+    margin: 0 0 2mm;
+    font-size: 10.5pt;
+    line-height: 1.35;
+  }
+  .case-decision-card p {
+    font-size: 9pt;
+    line-height: 1.5;
+  }
+  .case-closeout {
+    height: auto;
+    margin-top: auto;
+  }
+  .case-closeout > div {
+    min-height: 31mm;
+    padding: 3mm;
+  }
+  .case-closeout span { font-size: 8.5pt; }
+  .case-closeout p {
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .case-evidence-page .case-main {
+    gap: 4mm;
+  }
+  .case-evidence-page .case-evidence-section {
+    display: block;
+    flex: 0 0 auto;
+    padding-top: 2.5mm;
+  }
+  .case-evidence-page .case-code-list {
+    display: grid;
+    grid-template-rows: none;
+    gap: 2mm;
+    margin-top: 2.5mm;
+  }
+  .case-evidence-page .case-code-row {
+    display: grid;
+    gap: 1.4mm;
+    padding: 2.5mm 3mm;
+  }
+  .case-evidence-page .case-code-symbol { font-size: 9pt; }
+  .case-evidence-page .case-code-path { font-size: 8.5pt; line-height: 1.4; }
+  .case-evidence-page .case-code-snippet { font-size: 8.5pt; line-height: 1.4; }
+  .case-evidence-page .case-code-description { font-size: 9.3pt; line-height: 1.45; }
+  .case-evidence-page .case-code-test,
+  .case-evidence-page .case-code-test b { font-size: 8.3pt; line-height: 1.4; }
+  .case-verification-section .list {
+    display: grid;
+    gap: 2mm;
+    margin-top: 2.5mm;
+    padding-top: 0;
+  }
+  .case-verification-section .list li {
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .case-source-links {
+    margin-top: auto;
+    font-size: 8.5pt;
+    line-height: 1.4;
+  }
+  .case-page > .footer-note {
+    left: 8mm;
+    bottom: 5mm;
+    width: 34mm;
+    font-size: 7.5pt;
+    line-height: 1.3;
+    white-space: normal;
+  }
+  .capability-list {
+    flex: 1 1 auto;
+  }
+  .capability-row {
+    grid-template-columns: 47mm minmax(0, 1fr);
+    gap: 6mm;
+    padding: 4mm 0;
+  }
+  .capability-row h3 {
+    font-size: 12pt;
+    line-height: 1.35;
+  }
+  .capability-row header p {
+    margin-top: 1.5mm;
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .capability-row dl {
+    gap: 2mm;
+  }
+  .capability-row dl div {
+    grid-template-columns: 22mm minmax(0, 1fr);
+    gap: 3mm;
+  }
+  .capability-row dt {
+    font-size: 8.5pt;
+  }
+  .capability-row dd {
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+}
+
+/* A case study stays on one A4 page by selecting one complete evidence set. */
+.rail-index {
+  color: rgba(255,255,255,0.72);
+  font-size: 11px;
+  font-weight: 850;
+}
+.case-study-page .case-main {
+  gap: 14px;
+  padding: 38px 42px 34px;
+}
+.case-study-page .case-headline {
+  max-width: 760px;
+  margin: 8px 0 0;
+  color: var(--navy);
+  font-size: 29px;
+  line-height: 1.25;
+  font-weight: 850;
+  word-break: keep-all;
+}
+.case-study-page .case-subheading {
+  margin: 0;
+  padding-left: 10px;
+  border-left: 4px solid var(--case-accent);
+  color: var(--navy);
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 850;
+}
+.case-study-page .case-decision-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.case-study-page .case-evidence-grid {
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
+}
+.case-study-page .case-code-list {
+  grid-template-rows: none;
+}
+.case-study-page .case-verification-section .list {
+  display: grid;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .case-study-page .case-decision-grid,
+  .case-study-page .case-evidence-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media print {
+  .case-study-page .case-rail {
+    height: 297mm;
+    padding: 12mm 6mm 10mm 8mm;
+  }
+  .case-study-page .rail-index {
+    font-size: 8.5pt;
+    line-height: 1.4;
+  }
+  .case-study-page .case-project-name,
+  .case-study-page .case-project-name.compact,
+  .case-study-page .case-project-name.ultra-compact {
+    margin-top: 5mm;
+    font-size: 15pt;
+    line-height: 1.3;
+  }
+  .case-study-page .case-main {
+    display: flex;
+    height: 297mm;
+    gap: 2.7mm;
+    padding: 8mm 8mm 7mm;
+  }
+  .case-study-page .case-hero {
+    padding-bottom: 3mm;
+  }
+  .case-study-page .case-headline {
+    font-size: 17pt;
+    line-height: 1.28;
+  }
+  .case-study-page .case-hero p {
+    margin-top: 2mm;
+    font-size: 10pt;
+    line-height: 1.55;
+  }
+  .case-study-page .case-visual {
+    gap: 1.8mm;
+  }
+  .case-study-page .case-architecture {
+    min-height: 28mm;
+    padding: 2.5mm;
+  }
+  .case-study-page .case-architecture::before { top: 15mm; }
+  .case-study-page .case-architecture-head span,
+  .case-study-page .case-architecture-head b { font-size: 8.5pt; }
+  .case-study-page .case-arch-node {
+    min-height: 18mm;
+    padding: 1.5mm 1mm;
+  }
+  .case-study-page .case-arch-node strong { font-size: 8.5pt; line-height: 1.3; }
+  .case-study-page .case-arch-node em { font-size: 8pt; }
+  .case-study-page .case-proof-card {
+    min-height: 16mm;
+    padding: 1.8mm;
+  }
+  .case-study-page .case-proof-card b { font-size: 8pt; }
+  .case-study-page .case-proof-card strong { font-size: 9.5pt; line-height: 1.3; }
+  .case-study-page .case-proof-card p { font-size: 8.5pt; line-height: 1.4; }
+  .case-study-page .case-problem-band {
+    grid-template-columns: 31mm minmax(0, 1fr);
+    gap: 3mm;
+    min-height: 23mm;
+    padding: 2.5mm 0;
+  }
+  .case-study-page .case-subheading {
+    padding-left: 2.5mm;
+    border-left-width: 1mm;
+    font-size: 11pt;
+    line-height: 1.35;
+  }
+  .case-study-page .case-problem-band strong { font-size: 10pt; line-height: 1.45; }
+  .case-study-page .case-problem-band p {
+    margin-top: 1mm;
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .case-study-page .case-decision-band { gap: 2mm; }
+  .case-study-page .case-decision-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5mm;
+  }
+  .case-study-page .case-decision-card {
+    min-height: 25mm;
+    padding: 2.5mm;
+  }
+  .case-study-page .case-decision-card h4 {
+    margin-bottom: 1.5mm;
+    font-size: 10pt;
+    line-height: 1.35;
+  }
+  .case-study-page .case-decision-card p { font-size: 9.5pt; line-height: 1.5; }
+  .case-study-page .case-evidence-grid {
+    grid-template-columns: minmax(0, 1.38fr) minmax(0, 0.62fr);
+    gap: 3mm;
+  }
+  .case-study-page .case-evidence-section { padding-top: 2mm; }
+  .case-study-page .case-code-list { margin-top: 2mm; }
+  .case-study-page .case-code-row {
+    gap: 1mm;
+    padding: 2mm 2.5mm;
+  }
+  .case-study-page .case-code-symbol { font-size: 9pt; }
+  .case-study-page .case-code-path { font-size: 8.5pt; line-height: 1.4; }
+  .case-study-page .case-code-snippet { font-size: 8.5pt; line-height: 1.4; }
+  .case-study-page .case-code-description { font-size: 9.5pt; line-height: 1.5; }
+  .case-study-page .case-code-test,
+  .case-study-page .case-code-test b { font-size: 8.5pt; line-height: 1.4; }
+  .case-study-page .case-verification-section .list {
+    gap: 3mm;
+    margin-top: 2mm;
+    padding-top: 0;
+  }
+  .case-study-page .case-verification-section .list li {
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .case-study-page .case-closeout {
+    margin-top: auto;
+  }
+  .case-study-page .case-closeout > div {
+    min-height: 24mm;
+    padding: 2.5mm;
+  }
+  .case-study-page .case-closeout span { font-size: 8.5pt; }
+  .case-study-page .case-closeout p { font-size: 9.5pt; line-height: 1.5; }
+  .case-study-page .case-source-links {
+    margin-top: 0;
+    font-size: 8.5pt;
+    line-height: 1.4;
+  }
+  .page::after,
+  .footer-note,
+  .case-page > .footer-note { font-size: 8pt; }
+  .cover .lead { font-size: 10pt; line-height: 1.55; }
+  .cover-group-head h2 { font-size: 12pt; }
+  .cover-group-head span { font-size: 8.5pt; }
+  .cover-row .num { font-size: 11pt; }
+  .cover-row h3 { font-size: 12pt; }
+  .cover-row p { font-size: 9.5pt; line-height: 1.5; }
+  .map-hero p { font-size: 10pt; line-height: 1.55; }
+  .map-row .num { font-size: 11pt; }
+  .map-row h2 { font-size: 12pt; }
+  .map-row p { font-size: 9.5pt; line-height: 1.5; }
+  .route-panel .card h2 { font-size: 11pt; }
+  .route-panel .list li { font-size: 9.5pt; line-height: 1.5; }
+  .map-page .link-table th,
+  .map-page .link-table td { font-size: 9.5pt; line-height: 1.45; }
+  .summary-project-number { font-size: 8.5pt; }
+  .summary-project-head h3 { font-size: 12pt; }
+  .summary-project-domain { font-size: 8.5pt; line-height: 1.4; }
+  .summary-project-facts dt { font-size: 8.5pt; }
+  .summary-project-facts dd { font-size: 9.5pt; line-height: 1.5; }
+  .appendix-scope-grid { gap: 4mm; }
+  .appendix-scope-card { padding: 4mm; }
+  .appendix-scope-card header span { font-size: 8.5pt; }
+  .appendix-scope-card h3 { font-size: 12pt; }
+  .appendix-scope-card dl { gap: 2.5mm; margin-top: 3mm; }
+  .appendix-scope-card dt { font-size: 8.5pt; }
+  .appendix-scope-card dd { font-size: 9.5pt; line-height: 1.5; }
+}
 </style>
 </head>
 <body>
 
-  <section class="page case-page code-dense" data-page="01" style="--case-accent: #0f766e;">
+  <section class="page case-page case-study-page" data-page="01" style="--case-accent: #1c5d99;">
+
     <aside class="case-rail">
-      <div class="rail-kicker">백엔드 시스템 · 03</div>
-      <div class="case-number">03</div>
-      <h1 class="compact">Member Event Consistency</h1>
-      <p class="rail-domain">동시성 / 업무 불변식 / DB guard / Redis-RabbitMQ 비교</p>
+      <div class="rail-index">프로젝트 03</div>
+      <p class="case-project-name compact">Member Event Consistency</p>
+      <p class="rail-domain">동시성 / 업무 불변식 / DB 보호 조건 / Redis-RabbitMQ 비교</p>
       <div class="rail-block">
         <span class="rail-label">담당 범위</span>
         <p class="rail-text">2026.05-2026.06 / 개인 프로젝트 / Spring Boot 백엔드, 인프라 비교, 검증 대시보드</p>
-      </div>
-      <div class="rail-block">
-        <span class="rail-label">핵심 역량</span>
-        <ul class="rail-list"><li>동시성 제어</li><li>업무 불변식</li><li>Redis/RabbitMQ</li><li>Testcontainers</li></ul>
       </div>
       <div class="rail-block">
         <span class="rail-label">주요 기술</span>
         <div class="stack-grid"><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.5 5.5C13 4 7 7.8 6.2 13.3c-.5 3.7 2.8 6.2 6.4 5.1 3.6-1.1 5.8-5.2 5-8.8"/><path d="M6 18c2.6-4.8 6.4-7.5 11.5-8.6"/></svg><span>Spring Boot</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7" ry="3"/><path d="M5 5.5v9c0 1.7 3.1 3 7 3s7-1.3 7-3v-9"/><path d="M5 10c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg><span>PostgreSQL</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l8 3-8 3-8-3 8-3z"/><path d="M4 11l8 3 8-3M4 15l8 3 8-3"/></svg><span>Redis</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 18V8h4v5h2V8h4v10H5z"/><path d="M17 13h2v5h-2zM7 6V3M13 6V3"/></svg><span>RabbitMQ</span></div></div>
       </div>
     </aside>
+
     <main class="case-main">
       <div class="case-hero">
-        <div class="kicker">문제 · 설계 · 실패 조건 · 검증 결과</div>
-        <h2>보상·쿠폰·포인트 불변식마다 다른 동시성 제어를 적용한 백엔드</h2>
-        <p>첫 로그인 보상·쿠폰 발급·포인트 차감의 불변식을 PostgreSQL에서 최종 보호하고, Redis lock과 RabbitMQ 단일 worker의 적용 차이를 동시 요청으로 비교했습니다.</p>
+        <h1 class="case-headline">보상·쿠폰·포인트 불변식마다 다른 동시성 제어를 적용한 백엔드</h1>
+        <p>첫 로그인 보상·쿠폰 발급·포인트 차감의 불변식을 PostgreSQL에서 최종 보호하고, Redis 잠금과 RabbitMQ 단일 소비자의 적용 차이를 동시 요청으로 비교했습니다.</p>
       </div>
 
-      <section class="case-visual" style="--case-accent: #0f766e;">
+      <section class="case-visual" style="--case-accent: #1c5d99;">
         <div class="case-architecture comparison">
           <div class="case-architecture-head">
             <span>전략 비교</span>
@@ -2944,8 +3547,8 @@ tr:nth-child(even) td { background: #f8fafc; }
             <span class="case-proof-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h7l2 3h7v7H4z"/><path d="M8 13h8"/></svg></span>
             <div>
               <b>최초 보상</b>
-              <strong>8 requests → 1 reward</strong>
-              <p>7 rejected · duplicate 0</p>
+              <strong>동시 요청 8건 → 보상 1건</strong>
+              <p>7건 거절 · 중복 0건</p>
             </div>
           </article>
 
@@ -2954,7 +3557,7 @@ tr:nth-child(even) td { background: #f8fafc; }
             <div>
               <b>포인트 차감</b>
               <strong>100 - (2 × 60) → 40</strong>
-              <p>1 success · negative 0</p>
+              <p>1건 성공 · 음수 잔액 0건</p>
             </div>
           </article>
 
@@ -2962,56 +3565,42 @@ tr:nth-child(even) td { background: #f8fafc; }
             <span class="case-proof-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 18V8h4v5h2V8h4v10H5z"/><path d="M17 13h2v5h-2zM7 6V3M13 6V3"/></svg></span>
             <div>
               <b>쿠폰 용량</b>
-              <strong>8 requests / capacity 3</strong>
-              <p>3 issued · 5 rejected</p>
+              <strong>요청 8건 / 정원 3건</strong>
+              <p>3건 발급 · 5건 거절</p>
             </div>
           </article>
 </div>
       </section>
 
-      <div class="case-process-line">
-        <div class="flow-item">이벤트 시나리오</div><div class="flow-item">불변식 식별</div><div class="flow-item">DB guard</div><div class="flow-item">Redis/RabbitMQ 비교</div><div class="flow-item">Outbox</div><div class="flow-item">비교 리포트</div>
-      </div>
       <section class="case-problem-band">
         <div class="case-section-heading">
-          <span>01</span>
-          <h3>해결한 문제</h3>
+          <h2 class="case-subheading">해결한 문제</h2>
         </div>
         <div>
           <strong>중복 보상, 쿠폰 초과 발급, 포인트 음수 잔액</strong>
-          <p>모든 회원 이벤트를 하나의 memberId lock으로 묶으면 hot key 병목이 커지고, 아무 제어 없이 처리하면 중복 보상, 쿠폰 초과 발급, 포인트 음수 잔액, 후속 이벤트 누락이 발생합니다.</p>
+          <p>모든 회원 이벤트를 하나의 사용자 ID 잠금으로 묶으면 특정 키에 요청이 몰리고, 아무 제어 없이 처리하면 중복 보상, 쿠폰 초과 발급, 포인트 음수 잔액과 후속 이벤트 누락이 발생합니다.</p>
         </div>
       </section>
       <section class="case-decision-band">
         <div class="case-section-heading">
-          <span>02</span>
-          <h3>핵심 설계 판단</h3>
+          <h2 class="case-subheading">핵심 설계 판단</h2>
         </div>
         <div class="case-decision-grid">
         <article class="case-decision-card">
-          <span>01</span>
-          <h4>DB is final guard</h4>
-          <p>unique·check·조건부 갱신·row lock으로 최종 불변식 보호</p>
+          <h4>DB를 최종 보호 경계로</h4>
+          <p>고유·검사 제약, 조건부 갱신과 행 잠금으로 최종 불변식 보호</p>
         </article>
 
         <article class="case-decision-card">
-          <span>02</span>
-          <h4>Lock by invariant</h4>
-          <p>Redis lock을 전역 잠금이 아닌 경합 완화 수단으로 사용</p>
-        </article>
-
-        <article class="case-decision-card">
-          <span>03</span>
-          <h4>Queue hot campaigns</h4>
-          <p>RabbitMQ 단일 worker로 hot campaign 직렬화 비교</p>
+          <h4>불변식별 잠금</h4>
+          <p>Redis 잠금을 전역 잠금이 아닌 경합 완화 수단으로 사용</p>
         </article>
 </div>
       </section>
       <div class="case-evidence-grid">
         <section class="case-evidence-section">
           <div class="case-section-heading">
-            <span>03</span>
-            <h3>대표 코드 근거</h3>
+            <h2 class="case-subheading">대표 코드 근거</h2>
           </div>
           <div class="case-code-list">
         <div class="case-code-row">
@@ -3026,55 +3615,28 @@ for update</pre>
           <p class="case-code-description"><b>보호 규칙</b>캠페인 행 잠금과 용량 조건을 한 SQL 흐름에서 판정해 동시 요청의 초과 발급을 차단합니다.</p>
           <div class="case-code-test"><b>연결 테스트</b><span>backend/src/test/java/com/example/consistency/coupon/SqlCouponCampaignRepositoryTest.java<br>SqlCouponCampaignRepositoryTest.issueWithCapacityGuardUsesSingleStatementWithCampaignRowLock</span></div>
         </div>
-
-        <div class="case-code-row">
-          <div class="case-code-head">
-            <code class="case-code-symbol">SqlPointSpendRepository.tryDebit</code>
-            <span class="case-code-path"><b>파일</b>backend/src/main/java/com/example/consistency/point/SqlPointSpendRepository.java</span>
-          </div>
-          <pre class="case-code-snippet">version = version + 1,
-updated_at = now()
-where member_id = ?
-  and balance &gt;= ?</pre>
-          <p class="case-code-description"><b>보호 규칙</b>잔액이 지출액 이상일 때만 원자적으로 차감해 동시 요청에서도 음수 잔액을 허용하지 않습니다.</p>
-          <div class="case-code-test"><b>연결 테스트</b><span>backend/src/test/java/com/example/consistency/point/SqlPointSpendRepositoryTest.java<br>SqlPointSpendRepositoryTest.conditionalDebitKeepsBalanceNonNegative</span></div>
-        </div>
-
-        <div class="case-code-row">
-          <div class="case-code-head">
-            <code class="case-code-symbol">CouponCampaignRabbitMqWorker.handle</code>
-            <span class="case-code-path"><b>파일</b>backend/src/main/java/com/example/consistency/web/CouponCampaignRabbitMqWorker.java</span>
-          </div>
-          <pre class="case-code-snippet">@RabbitListener(queues = CouponCampaignRabbitMqConfiguration.COMMAND_QUEUE, concurrency = &quot;1&quot;)
-public void handle(CouponCampaignRabbitMqCommand command) {
-    if (!tracker.isActive(command.operationId())) {
-        return;</pre>
-          <p class="case-code-description"><b>보호 규칙</b>단일 consumer로 hot campaign을 직렬화하고 종료된 실행의 메시지를 무시하며 재시도·DLQ 경로를 분리합니다.</p>
-          <div class="case-code-test"><b>연결 테스트</b><span>backend/src/test/java/com/example/consistency/integration/MvpLiveInfrastructureIT.java<br>MvpLiveInfrastructureIT.rabbitMqCouponCampaignRouteRunsOnlyWhenLiveDependenciesAreHealthy</span></div>
-        </div>
 </div>
         </section>
-        <section class="case-evidence-section">
+        <section class="case-evidence-section case-verification-section">
           <div class="case-section-heading">
-            <span>04</span>
-            <h3>검증 결과</h3>
+            <h2 class="case-subheading">검증 결과</h2>
           </div>
-          <ul class="list green"><li>FirstLoginRewardDbConcurrencyIT는 동시 요청 8건 중 1건 지급·7건 거절을 assertion으로 고정합니다.</li><li>PointSpendDbConcurrencyIT는 잔액 100에서 60 차감 2건 중 1건만 성공해 잔액 40을 유지합니다.</li><li>MvpLiveInfrastructureIT는 용량 3 캠페인에 8건 요청 시 3건 발급·5건 거절·초과 발급 0을 확인합니다.</li></ul>
+          <ul class="list green"><li>FirstLoginRewardDbConcurrencyIT는 동시 요청 8건 중 1건 지급·7건 거절을 assertion으로 고정합니다.</li><li>PointSpendDbConcurrencyIT는 잔액 100에서 60 차감 2건 중 1건만 성공해 잔액 40을 유지합니다.</li></ul>
         </section>
       </div>
       <section class="case-closeout">
         <div>
           <span>구현 결과</span>
-          <p>DB guard를 최종 보호 장치로 두고 Redis lock, RabbitMQ lane, Outbox 책임을 업무 불변식별로 분리했습니다.</p>
+          <p>동시 보상 요청 8건은 1건만 반영됐고, 60포인트 차감 2건은 잔액 40에서 수렴했으며 정원 3건을 초과한 쿠폰은 발급되지 않았습니다.</p>
         </div>
         <div>
           <span>확인한 범위와 남은 경계</span>
           <p>PostgreSQL·Redis·RabbitMQ 통합 경로를 Testcontainers 시나리오로 고정했으며 운영 규모 부하와 장시간 장애 복구 SLO는 포함하지 않았습니다.</p>
         </div>
       </section>
-      <div class="case-source-links"><a href="https://github.com/cyson21/member-event-consistency">코드 저장소</a><span> · </span><a href="../repos/member-event-consistency/infra/demo/README.md">설계·검증 문서</a></div>
+      <div class="case-source-links"><a href="https://github.com/cyson21/member-event-consistency">코드 저장소</a><span> · </span><a href="https://github.com/cyson21/member-event-consistency/blob/main/infra/local/README.md">설계·검증 문서</a></div>
     </main>
-    <div class="footer-note">손찬양 · 03</div>
+    <div class="footer-note">손찬양 · Member Event Consistency</div>
   </section>
 
 </body>
