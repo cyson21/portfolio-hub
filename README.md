@@ -1,6 +1,6 @@
 # 손찬양 | Backend Engineering Portfolio
 
-Java/Spring을 중심으로 동시성, 부분 실패 복구, 이벤트 전달과 데이터 흐름을 구현하고 검증한 프로젝트 모음입니다.
+Java/Spring을 중심으로 동시성, 부분 실패 복구, 이벤트 전달과 데이터 흐름 문제를 해결한 프로젝트 모음입니다.
 
 ## 바로 보기
 
@@ -19,7 +19,7 @@ Java/Spring을 중심으로 동시성, 부분 실패 복구, 이벤트 전달과
 | 권한 기반 검색 | [Enterprise Policy RAG](https://github.com/cyson21/enterprise-policy-rag) · [웹 사례](https://cyson21.github.io/projects/enterprise-policy-rag/) | 검색 전 권한 필터, 근거 없는 답변 거절과 출처 제공 |
 | 이벤트 기반 개인화 | [Fashion Personalization Platform](https://github.com/cyson21/fashion-personalization-platform) · [웹 사례](https://cyson21.github.io/projects/fashion-personalization-platform/) | 이벤트 중복 방지, 추천 근거와 배치 스냅샷 |
 
-각 프로젝트에서 실패 조건을 어떻게 막았고 어느 범위까지 검증했는지는 저장소와 웹 사례에서 확인할 수 있습니다.
+각 프로젝트에서 어떤 설계로 실패 조건을 막았고 어디까지 구현했는지는 저장소와 웹 사례에서 확인할 수 있습니다.
 
 문서와 개인 자료의 이용 범위는 [CONTENT-NOTICE.md](CONTENT-NOTICE.md)를 따릅니다.
 
