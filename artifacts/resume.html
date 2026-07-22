@@ -308,7 +308,7 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-
       <section class="summary" aria-label="요약과 핵심 기술">
         <div class="card" aria-labelledby="summary-card-title">
           <h2 class="card-title" id="summary-card-title">요약</h2>
-          <ul class="list"><li>기업용 플랫폼의 API와 이벤트 모듈을 Java·Spring Boot로 개발·운영해 온 5년 경력 백엔드 개발자입니다.</li><li>운영 오류를 재현해 상태 변경·시간대 처리 규칙과 회귀 테스트를 보강하고, 구형 AWS SDK 전환과 DB 통합 테스트 표준화를 수행했습니다.</li></ul>
+          <ul class="list"><li>기업용 플랫폼의 API와 이벤트 모듈을 Java·Spring Boot로 개발·운영해 온 5년 경력 백엔드 개발자입니다.</li><li>운영 오류를 재현해 상태 변경과 시간대 처리의 경계 규칙을 바로잡고, 회귀 테스트로 재발 경로를 관리해 왔습니다.</li></ul>
         </div>
         <div class="card skill-matrix" aria-labelledby="skills-card-title"><h2 class="card-title" id="skills-card-title">핵심 기술</h2>
         <div class="skill-row">
@@ -349,8 +349,8 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-
           </div>
           <div class="period">2024.03 ~ 재직 중</div>
         </div>
-        <p class="exp-summary">기업용 플랫폼의 API와 이벤트 기능을 개발·운영하며 요구사항 분석, API와 데이터 저장 구조 설계·구현, 회귀 테스트를 담당했습니다.</p>
-        <ul class="list highlight-list"><li><span class="highlight-title">상태 변경 충돌 방지</span><span class="highlight-detail">화면을 연 뒤 저장하기 전에 처리 상태가 바뀌면 오래된 기준으로 저장되어 진행 상태와 완료 여부가 어긋나는 경로를 추적했습니다. 저장 직전에 최신 상태를 다시 확인하고 유효하지 않은 변경을 차단하도록 수정했습니다.</span></li><li><span class="highlight-title">시간대 변환 오류</span><span class="highlight-detail">UTC 기준 날짜를 KST 일정으로 변환하는 과정에서 알림이 하루 늦게 실행되거나 누락되는 오류를 재현했습니다. 날짜 경계의 변환·발송 규칙을 수정하고 회귀 테스트로 경계 조건을 확인했습니다.</span></li><li><span class="highlight-title">조회·삭제 조건 일치</span><span class="highlight-detail">같은 사용자 ID에 서로 다른 유형의 데이터가 연결될 때 일부 행이 누락되고 페이지 합계가 달라지는 원인을 확인했습니다. ID와 데이터 유형을 함께 비교하도록 QueryDSL 조회·삭제 조건을 통일하고 통합 테스트로 검증했습니다.</span></li><li><span class="highlight-title">AWS SDK v2 전환</span><span class="highlight-detail">S3 연동 코드에 혼재한 구형 AWS SDK를 v2로 전환하고 업로드·인증 방식을 통일했습니다. 구형 의존성 제거, 모듈 테스트와 빌드 산출물 검사로 전환 범위를 확인했습니다.</span></li><li><span class="highlight-title">DB 테스트 표준화</span><span class="highlight-detail">JPA 테스트마다 반복되던 수동 설정과 컨테이너 구성을 Testcontainers MySQL 기반 공통 구성으로 표준화했습니다. 공통 설정만으로 QueryDSL 조회와 시간대 변환을 실제 MySQL에서 반복 검증할 수 있게 했습니다.</span></li></ul>
+        <p class="exp-summary">기업용 플랫폼에서 요구사항을 API·데이터 모델로 설계하고, 운영 이슈의 재현·수정·회귀 검증까지 맡았습니다.</p>
+        <ul class="list highlight-list"><li><span class="highlight-title">상태 변경 충돌 방지</span><span class="highlight-detail">사용자가 화면을 연 뒤 저장하기 전에 상태가 바뀌면, 이전 상태를 기준으로 저장되어 진행 상태와 완료 여부가 어긋나는 문제가 있었습니다. 저장 직전에 최신 상태를 다시 검증해, 이미 상태가 변경된 건은 저장되지 않도록 수정했습니다.</span></li><li><span class="highlight-title">시간대 경계 알림 오류</span><span class="highlight-detail">UTC로 저장된 날짜를 KST 발송 일정으로 해석하는 날짜 경계에서 알림이 누락되거나 하루 늦게 발송되는 오류를 재현했습니다. 변환과 발송 규칙을 수정하고, 경계 조건을 회귀 테스트로 확인했습니다.</span></li><li><span class="highlight-title">조회·삭제 조건 일치</span><span class="highlight-detail">같은 사용자 ID에 서로 다른 유형의 데이터가 연결될 때 일부 행이 누락되고 페이지 합계가 달라지는 원인을 확인했습니다. ID와 데이터 유형을 함께 비교하도록 QueryDSL 조회·삭제 조건을 통일하고 통합 테스트로 검증했습니다.</span></li><li><span class="highlight-title">AWS SDK v2 전환</span><span class="highlight-detail">S3 연동에 섞여 있던 구형 AWS SDK 의존성을 v2로 통일하고, 업로드·인증 구현의 기준을 정리했습니다. 구형 의존성 제거와 모듈 테스트·빌드 검증으로 전환 범위를 확인했습니다.</span></li><li><span class="highlight-title">DB 테스트 표준화</span><span class="highlight-detail">테스트마다 반복되던 MySQL 컨테이너와 설정을 Testcontainers 기반 공통 구성으로 묶었습니다. QueryDSL 조회와 시간대 처리 로직을 실제 MySQL 조건에서 일관되게 반복 검증할 수 있게 했습니다.</span></li></ul>
       </section>
 
       </section>
@@ -401,10 +401,10 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-
           <h3>Member Event Consistency</h3>
           <span class="tag">동시성·정합성</span>
         </div>
-        <div class="keywords">PostgreSQL · Redis · RabbitMQ</div>
+        <div class="keywords">PostgreSQL · RabbitMQ</div>
         <div class="project-details">
           <div class="project-detail"><span>문제</span><p>동시 요청에서 최초 보상이 중복 지급되거나 쿠폰이 정원을 초과해 발급되고 포인트 잔액이 음수가 될 수 있었습니다.</p></div>
-          <div class="project-detail"><span>보호</span><p>PostgreSQL 제약과 조건부 갱신을 최종 보호 규칙으로 두고, Redis 잠금과 RabbitMQ 단일 소비자 처리의 역할을 분리했습니다.</p></div>
+          <div class="project-detail"><span>보호</span><p>PostgreSQL 제약과 조건부 갱신으로 최초 보상과 포인트 잔액의 최종 정합성을 보호하고, RabbitMQ 단일 소비자 처리로 정원 제한 쿠폰 발급을 제어했습니다.</p></div>
           <div class="project-detail"><span>검증</span><p>PostgreSQL Testcontainers에서 최초 보상 동시 요청 8건 중 1건만 반영됐고, 60포인트 차감 2건은 1건 성공·1건 거절·잔액 40으로 수렴했습니다. RabbitMQ Testcontainers에서는 정원 3건에 발급 3건·거절 5건을 검증했습니다.</p></div>
         </div>
         <div class="project-link"><a href="https://github.com/cyson21/member-event-consistency">github.com/cyson21/member-event-consistency</a></div>
@@ -417,9 +417,9 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-
         </div>
         <div class="keywords">FastAPI · PostgreSQL · RAG</div>
         <div class="project-details">
-          <div class="project-detail"><span>문제</span><p>권한 밖 문서가 검색 후보에 섞이거나 근거 문서 없이 LLM을 호출하면 보안 경계와 답변 신뢰도가 무너질 수 있었습니다.</p></div>
-          <div class="project-detail"><span>보호</span><p>워크스페이스·소유자·공개 범위·부서 권한을 검색 전에 적용하고, 허용된 근거가 없으면 답변을 생성하지 않도록 했습니다.</p></div>
-          <div class="project-detail"><span>검증</span><p>메모리 저장소 회귀 테스트에서 권한 밖 문서가 검색 결과에서 제외되고, 근거가 없을 때 거절 응답이 반환됨을 확인했습니다.</p></div>
+          <div class="project-detail"><span>문제</span><p>권한 조건이 검색 전에 적용되지 않으면 권한 밖 문서가 검색 후보에 포함될 수 있었습니다.</p></div>
+          <div class="project-detail"><span>보호</span><p>검색 전에 사용자 권한과 문서 공개 범위를 적용하고, 허용된 근거가 없으면 LLM 응답 생성을 중단하도록 구현했습니다.</p></div>
+          <div class="project-detail"><span>검증</span><p>메모리 저장소 기반 회귀 테스트로 권한 밖 문서 제외와 근거 없는 요청 거절을 확인했습니다.</p></div>
         </div>
         <div class="project-link"><a href="https://github.com/cyson21/enterprise-policy-rag">github.com/cyson21/enterprise-policy-rag</a></div>
       </article>
