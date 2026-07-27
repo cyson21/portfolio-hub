@@ -31,6 +31,15 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           if ! gh release view latest >/dev/null 2>&1; then
-            gh release create latest --title "Latest portfolio artifacts" --notes "Stable download endpoints for the latest verified resume and portfolio files."
+            gh release create latest --title "Latest resume and portfolio artifacts" --notes "Stable endpoints for the latest verified resume PDFs and portfolio HTML files."
           fi
+          {
+            printf '%s\n' manifest.json
+            jq -r '.assets[].name' artifacts/manifest.json
+          } | sort -u > /tmp/expected-release-assets.txt
+          gh release view latest --json assets --jq '.assets[].name' | while read -r asset; do
+            if ! grep -Fqx "$asset" /tmp/expected-release-assets.txt; then
+              gh release delete-asset latest "$asset" --yes
+            fi
+          done
           gh release upload latest artifacts/* --clobber

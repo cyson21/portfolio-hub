@@ -15,6 +15,17 @@ ROOT = Path(__file__).resolve().parents[1]
 ARTIFACTS = ROOT / "artifacts"
 MANIFEST = ARTIFACTS / "manifest.json"
 ALLOWED_EMAILS = {"cyson21@kakao.com"}
+REQUIRED_PUBLIC_ASSETS = {
+    "resume.pdf",
+    "portfolio-complete.html",
+    "portfolio-index.html",
+    "project-01-stockrush-portfolio.html",
+    "project-02-enterprise-policy-rag-portfolio.html",
+    "project-03-member-event-consistency-portfolio.html",
+    "project-04-ai-gateway-portfolio.html",
+    "project-05-cdc-data-platform-portfolio.html",
+    "project-06-fashion-personalization-platform-portfolio.html",
+}
 BANNED_TEXT = [
     ("local absolute path", re.compile(r"/Users/")),
     ("file URL", re.compile(r"file://", re.IGNORECASE)),
@@ -73,6 +84,9 @@ def main() -> None:
     actual = {path.name for path in ARTIFACTS.iterdir() if path.is_file() and path.name != "manifest.json"}
     if expected != actual:
         findings.append(f"artifact set differs: expected={sorted(expected)} actual={sorted(actual)}")
+    missing_required = REQUIRED_PUBLIC_ASSETS - expected
+    if missing_required:
+        findings.append(f"required public assets are missing: {sorted(missing_required)}")
 
     for entry in entries:
         name = entry.get("name")
@@ -87,6 +101,8 @@ def main() -> None:
         if entry.get("sha256") != digest(path):
             findings.append(f"sha256 differs: {name}")
         if path.suffix == ".pdf":
+            if not path.name.startswith("resume"):
+                findings.append(f"portfolio PDF is not allowed in public artifacts: {name}")
             if path.read_bytes()[:5] != b"%PDF-":
                 findings.append(f"invalid PDF header: {name}")
             else:
