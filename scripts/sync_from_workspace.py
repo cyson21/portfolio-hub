@@ -13,9 +13,7 @@ MAPPINGS = {
     "resumes/generated/resume-public.html": "resume.html",
     "resumes/generated/resume-public-ats.pdf": "resume-ats.pdf",
     "resumes/generated/resume-public-ats.html": "resume-ats.html",
-    "portfolio/portfolio-complete.pdf": "portfolio-complete.pdf",
     "portfolio/portfolio-complete.html": "portfolio-complete.html",
-    "portfolio/portfolio-index.pdf": "portfolio-index.pdf",
     "portfolio/portfolio-index.html": "portfolio-index.html",
     **{
         f"portfolio/project-{number:02d}-{slug}-portfolio.{extension}":
@@ -28,7 +26,7 @@ MAPPINGS = {
             (5, "cdc-data-platform"),
             (6, "fashion-personalization-platform"),
         ]
-        for extension in ["pdf", "html"]
+        for extension in ["html"]
     },
 }
 

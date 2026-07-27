@@ -3297,8 +3297,22 @@ tr:nth-child(even) td { background: #f8fafc; }
 .case-study-page .case-evidence-grid {
   grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.65fr);
 }
+.case-study-page .case-evidence-grid > * {
+  min-width: 0;
+}
 .case-study-page .case-code-list {
   grid-template-rows: none;
+}
+.case-study-page .case-code-test {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+}
+.case-study-page .case-code-test span,
+.case-study-page .case-verification-section .list li {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 .case-study-page .case-verification-section .list {
   display: grid;
@@ -3323,10 +3337,17 @@ tr:nth-child(even) td { background: #f8fafc; }
     line-height: 1.4;
   }
   .case-study-page .case-project-name,
-  .case-study-page .case-project-name.compact,
-  .case-study-page .case-project-name.ultra-compact {
+  .case-study-page .case-project-name.compact {
     margin-top: 5mm;
     font-size: 15pt;
+    line-height: 1.3;
+  }
+  .case-study-page .case-project-name.compact {
+    font-size: 13pt;
+  }
+  .case-study-page .case-project-name.ultra-compact {
+    margin-top: 5mm;
+    font-size: 11.5pt;
     line-height: 1.3;
   }
   .case-study-page .case-main {
@@ -3334,6 +3355,9 @@ tr:nth-child(even) td { background: #f8fafc; }
     height: 297mm;
     gap: 2.7mm;
     padding: 8mm 8mm 7mm;
+  }
+  .case-study-page .case-main > * {
+    flex-shrink: 0;
   }
   .case-study-page .case-hero {
     padding-bottom: 3mm;
@@ -3348,6 +3372,8 @@ tr:nth-child(even) td { background: #f8fafc; }
     line-height: 1.55;
   }
   .case-study-page .case-visual {
+    flex: 0 0 auto;
+    grid-template-rows: auto auto;
     gap: 1.8mm;
   }
   .case-study-page .case-architecture {
@@ -3404,6 +3430,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   }
   .case-study-page .case-decision-card p { font-size: 9.5pt; line-height: 1.5; }
   .case-study-page .case-evidence-grid {
+    flex: 0 0 auto;
     grid-template-columns: minmax(0, 1.38fr) minmax(0, 0.62fr);
     gap: 3mm;
   }
@@ -3441,6 +3468,16 @@ tr:nth-child(even) td { background: #f8fafc; }
     margin-top: 0;
     font-size: 8.5pt;
     line-height: 1.4;
+  }
+  .case-study-page.case-content-dense .case-main {
+    gap: 1.8mm;
+    padding: 7mm 8mm 6mm;
+  }
+  .case-study-page.case-content-dense .case-hero {
+    padding-bottom: 2.5mm;
+  }
+  .case-study-page.case-content-dense .case-decision-card {
+    min-height: 23mm;
   }
   .page::after,
   .footer-note,
@@ -3612,7 +3649,7 @@ tr:nth-child(even) td { background: #f8fafc; }
 if isinstance(selected_size, str) and selected_size in product.sizes:
     _add_weight(profile.size_preferences, selected_size, max(weight, 0.1))</pre>
           <p class="case-code-description"><b>보호 규칙</b>선택한 값이 실제 상품 옵션에 있을 때만 사이즈 선호에 반영해 잘못된 프로필 신호를 막습니다.</p>
-          <div class="case-code-test"><b>연결 테스트</b><span>tests/test_recommendation_engine.py<br>test_size_preference_contributes_to_ranking</span></div>
+          <div class="case-code-test"><b>연결 테스트</b><span>test_size_preference_contributes_to_ranking</span></div>
         </div>
 </div>
         </section>

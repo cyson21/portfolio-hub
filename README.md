@@ -4,9 +4,9 @@ Java/Spring을 중심으로 동시성, 부분 실패 복구, 이벤트 전달과
 
 ## 바로 보기
 
-| 이력서 PDF | 웹 포트폴리오 | 통합 포트폴리오 PDF |
+| 이력서 PDF | 웹 포트폴리오 | 통합 포트폴리오 HTML |
 |---|---|---|
-| [resume.pdf](https://github.com/cyson21/portfolio-hub/releases/download/latest/resume.pdf) | [cyson21.github.io](https://cyson21.github.io/) | [portfolio-complete.pdf](https://github.com/cyson21/portfolio-hub/releases/download/latest/portfolio-complete.pdf) |
+| [resume.pdf](https://github.com/cyson21/portfolio-hub/releases/download/latest/resume.pdf) | [cyson21.github.io](https://cyson21.github.io/) | [portfolio-complete.html](https://github.com/cyson21/portfolio-hub/releases/download/latest/portfolio-complete.html) |
 
 ## 직무 주제별 프로젝트
 
