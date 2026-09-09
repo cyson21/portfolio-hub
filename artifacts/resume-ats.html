@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="손찬양">
   <meta name="description" content="Java · Spring Boot 백엔드 개발자 이력서">
-  <meta name="keywords" content="Java, Spring Boot, Backend, JPA, QueryDSL, MySQL, Testcontainers">
+  <meta name="keywords" content="Java, Spring Boot, Backend, JPA, MySQL, Docker">
   <title>손찬양 이력서 ATS</title>
   <style>
 @page { size: A4; margin: 12mm 18mm 11mm; }
@@ -109,13 +109,13 @@ a:focus-visible { outline: 2px solid #174ea6; outline-offset: 2px; border-radius
       <header class="ats-header">
         <h1>손찬양</h1>
         <div class="ats-headline">Java · Spring Boot 백엔드 개발자</div>
-        <div class="ats-subtitle">5년 경력 · API 개발·운영 · 데이터 정합성</div>
+        <div class="ats-subtitle">5년 차 · API 개발·운영 · 데이터 정합성</div>
         <div class="ats-contact"><span><b>이메일:</b> <a href="mailto:cyson21@kakao.com">cyson21@kakao.com</a></span><span><b>GitHub:</b> <a href="https://github.com/cyson21">github.com/cyson21</a></span><span><b>포트폴리오:</b> <a href="https://cyson21.github.io/">cyson21.github.io</a></span></div>
       </header>
 
       <section aria-labelledby="ats-summary-title">
         <h2 id="ats-summary-title">요약</h2>
-        <ul class="ats-list"><li>기업용 플랫폼의 API와 이벤트 모듈을 Java·Spring Boot로 개발·운영해 온 5년 경력 백엔드 개발자입니다.</li><li>운영 오류를 재현해 상태 변경과 시간대 처리의 경계 규칙을 바로잡고, 회귀 테스트로 재발 경로를 관리해 왔습니다.</li></ul>
+        <ul class="ats-list"><li>Java·Spring Boot 기반의 5년 차 백엔드 개발자이며, 20개 이상의 기업 고객 서비스를 개발·운영했습니다.</li><li>백엔드 2명, 프론트엔드 1명의 3인 개발팀에서 협업했습니다.</li></ul>
       </section>
 
       <section aria-labelledby="ats-experience-title">
@@ -124,8 +124,8 @@ a:focus-visible { outline: 2px solid #174ea6; outline-offset: 2px; border-radius
       <section class="ats-entry">
         <div class="ats-entry-head"><h3>이엠캐스트(주)</h3><span class="ats-period">2024.03 ~ 재직 중</span></div>
         <div class="ats-role">백엔드 개발자 · 주임</div>
-        <p class="ats-summary">기업용 플랫폼에서 요구사항을 API·데이터 모델로 설계하고, 운영 이슈의 재현·수정·회귀 검증까지 맡았습니다.</p>
-        <ul class="ats-list"><li><b>상태 변경 충돌 방지:</b> 사용자가 화면을 연 뒤 저장하기 전에 상태가 바뀌면, 이전 상태를 기준으로 저장되어 진행 상태와 완료 여부가 어긋나는 문제가 있었습니다. 저장 직전에 최신 상태를 다시 검증해, 이미 상태가 변경된 건은 저장되지 않도록 수정했습니다.</li><li><b>시간대 경계 알림 오류:</b> UTC로 저장된 날짜를 KST 발송 일정으로 해석하는 날짜 경계에서 알림이 누락되거나 하루 늦게 발송되는 오류를 재현했습니다. 변환과 발송 규칙을 수정하고, 경계 조건을 회귀 테스트로 확인했습니다.</li><li><b>조회·삭제 조건 일치:</b> 같은 사용자 ID에 서로 다른 유형의 데이터가 연결될 때 일부 행이 누락되고 페이지 합계가 달라지는 원인을 확인했습니다. ID와 데이터 유형을 함께 비교하도록 QueryDSL 조회·삭제 조건을 통일하고 통합 테스트로 검증했습니다.</li><li><b>AWS SDK v2 전환:</b> S3 연동에 섞여 있던 구형 AWS SDK 의존성을 v2로 통일하고, 업로드·인증 구현의 기준을 정리했습니다. 구형 의존성 제거와 모듈 테스트·빌드 검증으로 전환 범위를 확인했습니다.</li><li><b>DB 테스트 표준화:</b> 테스트마다 반복되던 MySQL 컨테이너와 설정을 Testcontainers 기반 공통 구성으로 묶었습니다. QueryDSL 조회와 시간대 처리 로직을 실제 MySQL 조건에서 일관되게 반복 검증할 수 있게 했습니다.</li></ul>
+        <p class="ats-summary">Java·Spring Boot 기반 기업용 플랫폼의 REST API 설계·개발 및 운영을 담당했습니다.</p>
+        <ul class="ats-list"><li><b>REST API 설계·개발 및 운영:</b> Java·Spring Boot 기반 기업용 플랫폼의 REST API 설계·개발 및 운영</li><li><b>기업 고객 서비스 개발·운영:</b> 20개 이상의 기업 고객 서비스를 개발·운영했습니다.</li><li><b>3인 개발팀 협업:</b> 백엔드 2명, 프론트엔드 1명의 3인 개발팀에서 협업했습니다.</li><li><b>운영·플랫폼 개선:</b> 운영 장애 원인을 분석하고 API·DB 로직을 개선했습니다.</li><li><b>S3 연동 코드 AWS SDK 전환:</b> S3 연동 코드의 AWS SDK v1 → v2 마이그레이션</li><li><b>Docker 기반 배포·운영:</b> Docker 기반 배포와 서비스 운영을 담당했습니다.</li></ul>
       </section>
 
       <section class="ats-entry">
@@ -139,7 +139,7 @@ a:focus-visible { outline: 2px solid #174ea6; outline-offset: 2px; border-radius
 
       <section aria-labelledby="ats-skills-title">
         <h2 id="ats-skills-title">기술</h2>
-        <dl class="ats-skills"><div class="ats-skill-row"><dt>언어</dt><dd>Java, Python, SQL</dd></div><div class="ats-skill-row"><dt>프레임워크·ORM</dt><dd>Spring Boot, Spring Data JPA, QueryDSL, Django, FastAPI</dd></div><div class="ats-skill-row"><dt>데이터</dt><dd>MySQL, PostgreSQL, MongoDB</dd></div><div class="ats-skill-row"><dt>인프라·메시징</dt><dd>AWS S3, Docker, Kafka, Redis, RabbitMQ</dd></div><div class="ats-skill-row"><dt>테스트·도구</dt><dd>JUnit, Testcontainers, REST Docs, Git</dd></div></dl>
+        <dl class="ats-skills"><div class="ats-skill-row"><dt>언어</dt><dd>Java, Python, SQL</dd></div><div class="ats-skill-row"><dt>프레임워크·ORM</dt><dd>Spring Boot, Spring Data JPA, Django, FastAPI</dd></div><div class="ats-skill-row"><dt>데이터</dt><dd>MySQL, PostgreSQL, MongoDB</dd></div><div class="ats-skill-row"><dt>인프라·메시징</dt><dd>AWS S3, Docker, Kafka, Redis, RabbitMQ</dd></div><div class="ats-skill-row"><dt>테스트·도구</dt><dd>JUnit, REST Docs, Git</dd></div></dl>
       </section>
 
       <section aria-labelledby="ats-projects-title">
