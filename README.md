@@ -13,7 +13,7 @@ Java/Spring을 중심으로 동시성, 부분 실패 복구, 이벤트 전달과
 | 주제 | 프로젝트 | 확인할 구현 |
 |---|---|---|
 | 분산 상태와 복구 | [StockRush](https://github.com/cyson21/stockrush) · [웹 사례](https://cyson21.github.io/projects/stockrush/) | Saga, Transactional Outbox, 소비자 멱등성, Kafka 중단 복구 |
-| 동시성과 데이터 정합성 | [Member Event Consistency](https://github.com/cyson21/member-event-consistency) · [웹 사례](https://cyson21.github.io/projects/member-event-consistency/) | PostgreSQL 제약·행 잠금, Redis 잠금, RabbitMQ 순차 처리 |
+| 동시성과 데이터 정합성 | [Member Event Consistency](https://github.com/cyson21/member-event-consistency) · [웹 사례](https://cyson21.github.io/projects/member-event-consistency/) | PostgreSQL 제약·행 잠금, Redis 잠금, RabbitMQ 캠페인 경합 제어(단일 Spring 인스턴스의 listener concurrency=1 범위; 전역 ordering·전역 single-consumer 보장 아님) |
 | 공통 API 인프라 | [AI Gateway](https://github.com/cyson21/ai-gateway) · [웹 사례](https://cyson21.github.io/projects/ai-gateway/) | 조직 인증, 사용량 제한, 캐시, 모델 선택과 장애 복구 |
 | 변경 데이터와 재처리 | [CDC Data Platform](https://github.com/cyson21/cdc-data-platform) · [웹 사례](https://cyson21.github.io/projects/cdc-data-platform/) | Debezium CDC, 중복 처리 방지, 실패 추적과 재처리 |
 | 권한 기반 검색 | [Enterprise Policy RAG](https://github.com/cyson21/enterprise-policy-rag) · [웹 사례](https://cyson21.github.io/projects/enterprise-policy-rag/) | 검색 전 권한 필터, 근거 없는 답변 거절과 출처 제공 |
