@@ -14,9 +14,10 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ARTIFACTS = ROOT / "artifacts"
 MANIFEST = ARTIFACTS / "manifest.json"
-ALLOWED_EMAILS = {"cyson21@kakao.com"}
+ALLOWED_EMAILS = {"cyson21@gmail.com"}
 REQUIRED_PUBLIC_ASSETS = {
     "resume.pdf",
+    "resume.html",
     "portfolio-complete.html",
     "portfolio-index.html",
     "project-01-stockrush-portfolio.html",

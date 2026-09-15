@@ -4,74 +4,62 @@
     {
       "name": "portfolio-complete.html",
       "path": "artifacts/portfolio-complete.html",
-      "sha256": "913f315d76c44a05e4a1f7955dfdd56462d241646989a220800b9d6b6f8f475b",
-      "bytes": 155337
+      "sha256": "b615827a4350ffdeee8595f7bf1796cca964e97770065412c510149660a2e4ed",
+      "bytes": 161382
     },
     {
       "name": "portfolio-index.html",
       "path": "artifacts/portfolio-index.html",
-      "sha256": "dc232bddd009127521ec6da232f3fa17a4e62fde3f1806fe4f68f365a82ad7cb",
-      "bytes": 81473
+      "sha256": "3caf05577e32941858cb13f613ce92f1519b891cdf2bd3d79b846de7caa35cd1",
+      "bytes": 83364
     },
     {
       "name": "project-01-stockrush-portfolio.html",
       "path": "artifacts/project-01-stockrush-portfolio.html",
-      "sha256": "19fe61bc31eb41c110ad9c340fd695f910a4d16dd765dff2089e17080db2034d",
-      "bytes": 89499
+      "sha256": "4d91e1bd3ef789248724b0af8bd91d1488c9deaa59b7e57b661c24af1de19ed2",
+      "bytes": 89559
     },
     {
       "name": "project-02-enterprise-policy-rag-portfolio.html",
       "path": "artifacts/project-02-enterprise-policy-rag-portfolio.html",
-      "sha256": "ff20a54d5c7886a401ae47d3c6554dfc1c426860bc9b37cfa2e5db66cba324a6",
-      "bytes": 89529
+      "sha256": "99a957e666d674c8e7e93c71000ee8f390e6ee2e932246f8e2db3d723799a8e8",
+      "bytes": 89588
     },
     {
       "name": "project-03-member-event-consistency-portfolio.html",
       "path": "artifacts/project-03-member-event-consistency-portfolio.html",
-      "sha256": "dc8cc1fb55ecded12174b08fe83eaca5732efeeaa0785ef3143ad371368e32b3",
-      "bytes": 89286
+      "sha256": "7e5d5dbaf2d90c79bb28755ef37767cd69c87d5285910d3e2020ee1f15816976",
+      "bytes": 89359
     },
     {
       "name": "project-04-ai-gateway-portfolio.html",
       "path": "artifacts/project-04-ai-gateway-portfolio.html",
-      "sha256": "0b3fe095a0da13f6591156a0769ebfe255b056345acd93733cf0dbe577efecfc",
-      "bytes": 89808
+      "sha256": "82dcca2ea9c1e0b2043fcae11756e4fcd7633a53cbac5b3f260e2ace67ce5cb9",
+      "bytes": 89882
     },
     {
       "name": "project-05-cdc-data-platform-portfolio.html",
       "path": "artifacts/project-05-cdc-data-platform-portfolio.html",
-      "sha256": "2972079ac2a6184c9aaf8025477ed1e786ebcd2da43b86717967f0aade11ad0a",
-      "bytes": 89922
+      "sha256": "ac12f04ea1fe59d57f3eef08c05f68117c04c4a11134ae295eaeb0cd67fbcd0e",
+      "bytes": 89975
     },
     {
       "name": "project-06-fashion-personalization-platform-portfolio.html",
       "path": "artifacts/project-06-fashion-personalization-platform-portfolio.html",
-      "sha256": "9e1e8c7bed130d2d1e25669365a00051b07d793a5c85d047e11be34b25af7624",
-      "bytes": 89368
-    },
-    {
-      "name": "resume-ats.html",
-      "path": "artifacts/resume-ats.html",
-      "sha256": "979b96e8265cc40371cf3a7d781918992b4354ea222239e13ba66a3dfee55f23",
-      "bytes": 10928
-    },
-    {
-      "name": "resume-ats.pdf",
-      "path": "artifacts/resume-ats.pdf",
-      "sha256": "cfbd3416c6725ac060f9916aac595cf5b098a631b4535bf628fb19a27f9d5590",
-      "bytes": 8813
+      "sha256": "8ead6205d76b2e5993fc1e16a5043fb16c1f134ee8581c946b6b5204a66d118b",
+      "bytes": 89428
     },
     {
       "name": "resume.html",
       "path": "artifacts/resume.html",
-      "sha256": "178c3f779381b44db4f814ab9729bbaa23279c8409b727b154635c521d5e68d3",
-      "bytes": 87904
+      "sha256": "68a07e48e06da7218bfc5686f9cc869a93440faecb94c839e4512eb83316d3dd",
+      "bytes": 89860
     },
     {
       "name": "resume.pdf",
       "path": "artifacts/resume.pdf",
-      "sha256": "cfbd3416c6725ac060f9916aac595cf5b098a631b4535bf628fb19a27f9d5590",
-      "bytes": 8813
+      "sha256": "40144a058350876f5cabb5839038240441e044e1a0c7837d193fcb7026abdc1a",
+      "bytes": 620610
     }
   ]
 }

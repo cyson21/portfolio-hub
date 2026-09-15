@@ -11,8 +11,6 @@ from pathlib import Path
 MAPPINGS = {
     "resumes/generated/resume-public.pdf": "resume.pdf",
     "resumes/generated/resume-public.html": "resume.html",
-    "resumes/generated/resume-public-ats.pdf": "resume-ats.pdf",
-    "resumes/generated/resume-public-ats.html": "resume-ats.html",
     "portfolio/portfolio-complete.html": "portfolio-complete.html",
     "portfolio/portfolio-index.html": "portfolio-index.html",
     **{

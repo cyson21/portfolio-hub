@@ -2020,6 +2020,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   line-height: 1.45;
   font-weight: 650;
 }
+.map-hero .compact-note { color: rgba(255,255,255,0.76); }
 .map-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -3517,7 +3518,7 @@ tr:nth-child(even) td { background: #f8fafc; }
 
     <aside class="case-rail">
       <div class="rail-index">프로젝트 05</div>
-      <p class="case-project-name ">CDC Data Platform (프로토타입)</p>
+      <p class="case-project-name compact">CDC Data Platform (프로토타입)</p>
       <p class="rail-domain">CDC / Kafka / Lakehouse / Lineage / Replay</p>
       <div class="rail-block">
         <span class="rail-label">담당 범위</span>
@@ -3525,6 +3526,7 @@ tr:nth-child(even) td { background: #f8fafc; }
       </div>
       <div class="rail-block">
         <span class="rail-label">주요 기술</span>
+
         <div class="stack-grid"><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18.5 5.5C13 4 7 7.8 6.2 13.3c-.5 3.7 2.8 6.2 6.4 5.1 3.6-1.1 5.8-5.2 5-8.8"/><path d="M6 18c2.6-4.8 6.4-7.5 11.5-8.6"/></svg><span>Spring Boot</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7" ry="3"/><path d="M5 5.5v9c0 1.7 3.1 3 7 3s7-1.3 7-3v-9"/><path d="M5 10c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg><span>PostgreSQL</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5h6v6H5zM13 13h6v6h-6z"/><path d="M12 7h4a3 3 0 0 1 3 3v1M12 17H8a3 3 0 0 1-3-3v-1"/><path d="M14 5l2 2-2 2M10 19l-2-2 2-2"/></svg><span>Debezium</span></div><div class="stack-token"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="12" r="2.2"/><circle cx="16" cy="6" r="2.2"/><circle cx="16" cy="18" r="2.2"/><path d="M8 11l6-4M8 13l6 4"/></svg><span>Kafka</span></div></div>
       </div>
     </aside>
@@ -3532,7 +3534,7 @@ tr:nth-child(even) td { background: #f8fafc; }
     <main class="case-main">
       <div class="case-hero">
         <h1 class="case-headline">변경 캡처·복구·저장을 독립 경계에서 검증한 CDC 프로토타입</h1>
-        <p>PostgreSQL 변경 캡처, 표준 이벤트 제어와 레이크하우스 저장을 세 독립 실험으로 구현했습니다. 각 경계에서 원천 메타데이터, 중복 처리 장부, 재처리 상태와 데이터 계보를 검증했습니다.</p>
+        <p>CDC runtime, control plane, lakehouse 구성요소를 독립적인 범위로 구현했습니다. DB 변경 중복을 막고 적재 실패 원인과 재처리 상태를 원천 위치와 함께 추적하는 범위를 검증했습니다.</p>
       </div>
 
       <section class="case-visual" style="--case-accent: #1c5d99;">
