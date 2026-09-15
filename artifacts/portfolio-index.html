@@ -2020,6 +2020,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   line-height: 1.45;
   font-weight: 650;
 }
+.map-hero .compact-note { color: rgba(255,255,255,0.76); }
 .map-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -3516,7 +3517,7 @@ tr:nth-child(even) td { background: #f8fafc; }
   <section class="page map-page" data-page="01">
     <div class="map-hero">
       <h1>손찬양 백엔드 프로젝트</h1>
-      <p>분산 상태 수렴, 동시성 제어, 접근 권한, 데이터 재처리와 AI 요청 정책을 구현하고 테스트로 검증했습니다.</p>
+      <p>분산 상태 수렴, 동시성 제어, 접근 권한, 데이터 재처리와 AI 요청 정책을 구현하고 테스트로 검증했습니다.<br><span class="compact-note">실무에서는 4인 실무 개발팀에서 20개 이상의 기업 고객 서비스를 개발·운영했습니다. 아래 프로젝트는 실무 경력과 구분되는 개인 프로젝트 검증 자료입니다.</span></p>
     </div>
     <div class="map-list">
 
@@ -3548,23 +3549,23 @@ tr:nth-child(even) td { background: #f8fafc; }
         <div class="num">04</div>
         <div>
           <h2>AI Gateway</h2>
-          <p>LLM·데이터·개인화 · LLM Gateway / 라우팅 / 비용 보호 / 캐시 / 폴백 / 관측</p>
+          <p>LLM·데이터 · LLM Gateway / 라우팅 / 비용 보호 / 캐시 / 폴백 / 관측</p>
         </div>
       </article>
 
       <article class="map-row">
         <div class="num">05</div>
         <div>
-          <h2>CDC Data Platform</h2>
-          <p>LLM·데이터·개인화 · CDC / Kafka / Lakehouse / Lineage / Replay</p>
+          <h2>CDC Data Platform (프로토타입)</h2>
+          <p>LLM·데이터 · CDC / Kafka / Lakehouse / Lineage / Replay</p>
         </div>
       </article>
 
       <article class="map-row">
         <div class="num">06</div>
         <div>
-          <h2>Fashion Personalization Platform</h2>
-          <p>LLM·데이터·개인화 · Python API / 커머스 개인화 / 추천 배치 / 이벤트 처리</p>
+          <h2><a href="https://github.com/cyson21/portfolio-hub/releases/download/latest/project-06-fashion-personalization-platform-portfolio.html">Fashion Personalization Platform</a></h2>
+          <p>기타 실험 · Python API / 커머스 개인화 / 추천 배치 / 이벤트 처리</p>
         </div>
       </article>
 
@@ -3572,16 +3573,16 @@ tr:nth-child(even) td { background: #f8fafc; }
     <div class="route-panel">
       <div class="card">
         <h2>정합성과 복구</h2>
-        <ul class="list"><li>StockRush: Saga와 Outbox로 주문 상태 수렴</li><li>Member Event Consistency: DB guard로 업무 불변식 보호</li><li>CDC Data Platform: 중복 replay와 sink 실패 추적</li></ul>
+        <ul class="list"><li>StockRush: Saga와 Outbox로 주문 상태 수렴</li><li>Member Event Consistency: DB guard로 업무 불변식 보호</li><li>CDC Data Platform (프로토타입): 중복 replay와 sink 실패 추적</li></ul>
       </div>
       <div class="card soft">
         <h2>AI 정책과 데이터 제품</h2>
-        <ul class="list green"><li>Enterprise Policy RAG: 권한 밖 검색과 무근거 답변 차단</li><li>AI Gateway: LLM 예산·캐시·라우팅·폴백 통합</li><li>Fashion Personalization: 실패 이벤트 격리와 추천 최신성 추적</li></ul>
+        <ul class="list green"><li>Enterprise Policy RAG: 권한 밖 검색과 무근거 답변 차단</li><li>AI Gateway: LLM 예산·캐시·라우팅·폴백 통합</li></ul>
       </div>
     </div>
     <table class="link-table">
-      <thead><tr><th style="width: 18mm;">번호</th><th style="width: 44mm;">프로젝트</th><th>영역</th><th style="width: 58mm;">개별 PDF</th></tr></thead>
-      <tbody><tr><td>01</td><td>StockRush</td><td>정합성·권한·동시성 · 분산 커머스 / 주문 상태 수렴 / 이벤트 기반 백엔드</td><td><a href="https://github.com/cyson21/portfolio-hub/releases/download/latest/project-01-stockrush-portfolio.html">project-01-stockrush-portfolio.html</a></td></tr><tr><td>03</td><td>Member Event Consistency</td><td>정합성·권한·동시성 · 동시성 / 업무 불변식 / DB 보호 조건 / Redis-RabbitMQ 비교</td><td><a href="https://github.com/cyson21/portfolio-hub/releases/download/latest/project-03-member-event-consistency-portfolio.html">project-03-member-event-consistency-portfolio.html</a></td></tr><tr><td>02</td><td>Enterprise Policy RAG</td><td>정합성·권한·동시성 · AI 백엔드 / RAG / 권한 검색 / 운영 관측</td><td><a href="https://github.com/cyson21/portfolio-hub/releases/download/latest/project-02-enterprise-policy-rag-portfolio.html">project-02-enterprise-policy-rag-portfolio.html</a></td></tr><tr><td>04</td><td>AI Gateway</td><td>LLM·데이터·개인화 · LLM Gateway / 라우팅 / 비용 보호 / 캐시 / 폴백 / 관측</td><td><a href="https://github.com/cyson21/portfolio-hub/releases/download/latest/project-04-ai-gateway-portfolio.html">project-04-ai-gateway-portfolio.html</a></td></tr><tr><td>05</td><td>CDC Data Platform</td><td>LLM·데이터·개인화 · CDC / Kafka / Lakehouse / Lineage / Replay</td><td><a href="https://github.com/cyson21/portfolio-hub/releases/download/latest/project-05-cdc-data-platform-portfolio.html">project-05-cdc-data-platform-portfolio.html</a></td></tr><tr><td>06</td><td>Fashion Personalization Platform</td><td>LLM·데이터·개인화 · Python API / 커머스 개인화 / 추천 배치 / 이벤트 처리</td><td><a href="https://github.com/cyson21/portfolio-hub/releases/download/latest/project-06-fashion-personalization-platform-portfolio.html">project-06-fashion-personalization-platform-portfolio.html</a></td></tr></tbody>
+      <thead><tr><th style="width: 18mm;">번호</th><th style="width: 44mm;">프로젝트</th><th>영역</th><th style="width: 58mm;">개별 HTML</th></tr></thead>
+      <tbody><tr><td>01</td><td>StockRush</td><td>정합성·권한·동시성 · 분산 커머스 / 주문 상태 수렴 / 이벤트 기반 백엔드</td><td><a href="https://github.com/cyson21/portfolio-hub/releases/download/latest/project-01-stockrush-portfolio.html">project-01-stockrush-portfolio.html</a></td></tr><tr><td>03</td><td>Member Event Consistency</td><td>정합성·권한·동시성 · 동시성 / 업무 불변식 / DB 보호 조건 / Redis-RabbitMQ 비교</td><td><a href="https://github.com/cyson21/portfolio-hub/releases/download/latest/project-03-member-event-consistency-portfolio.html">project-03-member-event-consistency-portfolio.html</a></td></tr><tr><td>02</td><td>Enterprise Policy RAG</td><td>정합성·권한·동시성 · AI 백엔드 / RAG / 권한 검색 / 운영 관측</td><td><a href="https://github.com/cyson21/portfolio-hub/releases/download/latest/project-02-enterprise-policy-rag-portfolio.html">project-02-enterprise-policy-rag-portfolio.html</a></td></tr><tr><td>04</td><td>AI Gateway</td><td>LLM·데이터 · LLM Gateway / 라우팅 / 비용 보호 / 캐시 / 폴백 / 관측</td><td><a href="https://github.com/cyson21/portfolio-hub/releases/download/latest/project-04-ai-gateway-portfolio.html">project-04-ai-gateway-portfolio.html</a></td></tr><tr><td>05</td><td>CDC Data Platform (프로토타입)</td><td>LLM·데이터 · CDC / Kafka / Lakehouse / Lineage / Replay</td><td><a href="https://github.com/cyson21/portfolio-hub/releases/download/latest/project-05-cdc-data-platform-portfolio.html">project-05-cdc-data-platform-portfolio.html</a></td></tr></tbody>
     </table>
     <div class="footer-note">손찬양 · 포트폴리오 인덱스</div>
   </section>
