@@ -14,7 +14,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 ARTIFACTS = ROOT / "artifacts"
 MANIFEST = ARTIFACTS / "manifest.json"
-ALLOWED_EMAILS = {"cyson21@gmail.com"}
+ALLOWED_EMAILS = {"cyson21@gmail.com", "cyson21@kakao.com"}
 REQUIRED_PUBLIC_ASSETS = {
     "resume.pdf",
     "resume.html",
@@ -27,11 +27,11 @@ REQUIRED_PUBLIC_ASSETS = {
     "project-05-cdc-data-platform-portfolio.html",
     "project-06-fashion-personalization-platform-portfolio.html",
 }
+PHONE_PATTERN = re.compile(r"\b01[016789][-.\s]?\d{3,4}[-.\s]?\d{4}\b")
 BANNED_TEXT = [
     ("local absolute path", re.compile(r"/Users/")),
     ("file URL", re.compile(r"file://", re.IGNORECASE)),
     ("loopback address", re.compile(r"127\.0\.0\.1|localhost", re.IGNORECASE)),
-    ("Korean phone number", re.compile(r"\b01[016789][-.\s]?\d{3,4}[-.\s]?\d{4}\b")),
     ("private key", re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----")),
     ("AWS access key", re.compile(r"\bAKIA[0-9A-Z]{16}\b")),
 ]
@@ -45,10 +45,12 @@ def digest(path: Path) -> str:
     return hasher.hexdigest()
 
 
-def scan_text(name: str, text: str, findings: list[str]) -> None:
+def scan_text(name: str, text: str, findings: list[str], *, allow_phone: bool = False) -> None:
     for label, pattern in BANNED_TEXT:
         if pattern.search(text):
             findings.append(f"{name}: {label}")
+    if not allow_phone and PHONE_PATTERN.search(text):
+        findings.append(f"{name}: Korean phone number")
     for email in re.findall(r"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}", text, re.IGNORECASE):
         if email.lower() not in ALLOWED_EMAILS:
             findings.append(f"{name}: unapproved email {email}")
@@ -56,19 +58,28 @@ def scan_text(name: str, text: str, findings: list[str]) -> None:
 
 def extract_pdf_text(path: Path) -> str:
     executable = os.environ.get("PDFTOTEXT_BIN") or shutil.which("pdftotext")
-    if not executable:
-        raise RuntimeError("pdftotext is required to verify PDF text")
-    with tempfile.TemporaryDirectory(prefix="portfolio-pdf-text-") as directory:
-        output = Path(directory) / "document.txt"
-        completed = subprocess.run(
-            [executable, "-layout", str(path), str(output)],
-            check=False,
-            capture_output=True,
-            text=True,
-        )
-        if completed.returncode != 0:
-            raise RuntimeError(completed.stderr.strip() or f"pdftotext failed for {path.name}")
-        return output.read_text(encoding="utf-8", errors="replace")
+    if executable:
+        with tempfile.TemporaryDirectory(prefix="portfolio-pdf-text-") as directory:
+            output = Path(directory) / "document.txt"
+            try:
+                completed = subprocess.run(
+                    [executable, "-layout", str(path), str(output)],
+                    check=False,
+                    capture_output=True,
+                    text=True,
+                )
+            except FileNotFoundError:
+                completed = None
+            if completed is not None:
+                if completed.returncode != 0:
+                    raise RuntimeError(completed.stderr.strip() or f"pdftotext failed for {path.name}")
+                return output.read_text(encoding="utf-8", errors="replace")
+
+    try:
+        from pypdf import PdfReader
+    except ImportError as error:
+        raise RuntimeError("pdftotext or pypdf is required to verify PDF text") from error
+    return "\n".join(page.extract_text() or "" for page in PdfReader(str(path)).pages)
 
 
 def main() -> None:
@@ -108,7 +119,12 @@ def main() -> None:
                 findings.append(f"invalid PDF header: {name}")
             else:
                 try:
-                    scan_text(str(name), extract_pdf_text(path), findings)
+                    scan_text(
+                        str(name),
+                        extract_pdf_text(path),
+                        findings,
+                        allow_phone=path.name == "resume.pdf",
+                    )
                 except RuntimeError as error:
                     findings.append(f"{name}: {error}")
         if path.suffix == ".html":
