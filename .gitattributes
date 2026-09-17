@@ -1,0 +1,2 @@
+# Keep manifest-approved HTML bytes stable across Windows and Linux checkouts.
+/artifacts/*.html text eol=lf
