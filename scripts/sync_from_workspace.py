@@ -59,7 +59,10 @@ def main() -> None:
             missing.append(source_name)
             continue
         temporary = artifact_root / f".{output_name}.tmp"
-        shutil.copy2(source_path, temporary)
+        if output_name.endswith(".html"):
+            temporary.write_bytes(source_path.read_bytes().replace(b"\r\n", b"\n"))
+        else:
+            shutil.copy2(source_path, temporary)
         temporary.replace(artifact_root / output_name)
 
     if missing:

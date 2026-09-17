@@ -112,6 +112,8 @@ def main() -> None:
                 except RuntimeError as error:
                     findings.append(f"{name}: {error}")
         if path.suffix == ".html":
+            if b"\r" in path.read_bytes():
+                findings.append(f"non-canonical line endings: {name}")
             text = path.read_text(encoding="utf-8", errors="replace")
             if "<html" not in text.lower() or "</html>" not in text.lower():
                 findings.append(f"invalid HTML document: {name}")
