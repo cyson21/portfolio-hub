@@ -52,14 +52,14 @@
     {
       "name": "resume.html",
       "path": "artifacts/resume.html",
-      "sha256": "68a07e48e06da7218bfc5686f9cc869a93440faecb94c839e4512eb83316d3dd",
-      "bytes": 89860
+      "sha256": "aa504d97756f8703511ef0210e1a0502613465a845e8f051fa9796f574f2de66",
+      "bytes": 90230
     },
     {
       "name": "resume.pdf",
       "path": "artifacts/resume.pdf",
-      "sha256": "407928493f0dabb085372662882240b2d72b541502cc3e26aa690a6567c4b42e",
-      "bytes": 109018
+      "sha256": "27b17d139a3f0c38aa924e002b103033af30376403f66c2f30d9119e167205b6",
+      "bytes": 597820
     }
   ]
 }
