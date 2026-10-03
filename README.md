@@ -1,6 +1,6 @@
 # 손찬양 | Backend Engineering Portfolio
 
-Java/Spring을 중심으로 동시성, 부분 실패 복구, 이벤트 전달과 데이터 흐름을 다룬 프로젝트 자료를 모았습니다.
+Java·Spring 기반 API 개발·운영과 운영 안정화 경험을 소개합니다. 회사 실무 경력과 개인 프로젝트의 공개 구현을 구분해 안내합니다.
 
 아래 프로젝트 설명과 기술 스택은 개인 프로젝트에서 설계·구현·검증한 범위이며, 실무 운영 경험과 구분합니다.
 
@@ -8,11 +8,13 @@ Java/Spring을 중심으로 동시성, 부분 실패 복구, 이벤트 전달과
 
 ## 바로 보기
 
-| 이력서 PDF | 웹 포트폴리오 | 통합 포트폴리오 HTML |
+| 이력서 PDF · 2쪽 | 경력기술서 PDF · 3쪽 | 포트폴리오 HTML |
 |---|---|---|
-| [resume.pdf](https://github.com/cyson21/portfolio-hub/releases/download/latest/resume.pdf) | [cyson21.github.io](https://cyson21.github.io/) | [cyson21.github.io/portfolio](https://cyson21.github.io/portfolio/) |
+| [업무·핵심 기여 요약](https://cyson21.github.io/downloads/resume.pdf) | [서비스 맥락·역할·주요 기여](https://cyson21.github.io/downloads/career-description.pdf) | [실무 사례와 개인 프로젝트 상세](https://cyson21.github.io/portfolio/index.html) |
 
-## 직무 주제별 프로젝트
+최신 제출 파일은 위 웹사이트 경로를 사용합니다. 이 저장소의 릴리스 첨부는 과거 배포 자료이며 최신 웹 파일과 동일하다고 전제하지 않습니다.
+
+## 개인 프로젝트 · 주제별 공개 구현
 
 | 주제 | 프로젝트 | 확인할 구현 |
 |---|---|---|
