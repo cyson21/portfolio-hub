@@ -29,3 +29,11 @@ Java·Spring 기반 API 개발·운영과 운영 안정화 경험을 소개합�
 문서와 개인 자료의 이용 범위는 [CONTENT-NOTICE.md](CONTENT-NOTICE.md)를 따릅니다.
 
 자료 생성·검증·배포 절차는 [유지보수 문서](docs/maintenance.md)에 분리했습니다.
+
+## 저장소 간 자료 흐름
+
+현재 제출 문서의 편집·생성·배포 기준은 [cyson21.github.io](https://github.com/cyson21/cyson21.github.io)의 사이트 소스와 공개 다운로드입니다. [GitHub 프로필](https://github.com/cyson21/cyson21)과 이 README는 해당 사이트와 각 구현 저장소를 안내합니다.
+
+이 저장소에는 별도의 과거 자료 동기화 경로가 남아 있습니다. `scripts/sync_from_workspace.py --source <작업공간>`은 허용된 생성 파일을 `artifacts/`로 복사하고 manifest를 갱신합니다. 이 경로를 사용할 때는 `docs/maintenance.md`의 공개 범위와 검사 절차를 먼저 따릅니다. 최신 사이트 소스가 이 스크립트로 자동 변환되는 것은 아닙니다.
+
+`publish-latest.yml`은 main의 `artifacts/**`, 자산 검사 스크립트 또는 해당 workflow가 바뀔 때 검증 후 `latest` 릴리스를 갱신합니다. README만 바꿔서는 PDF가 교체되지 않습니다. 릴리스 자산을 최신 제출 파일로 안내하려면 현재 사이트 다운로드와 내용을 먼저 대조해야 합니다.
